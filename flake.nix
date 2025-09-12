@@ -37,5 +37,15 @@
         inherit inputs username;
       };
     };
+
+    homeConfigurations.main = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      modules = [ 
+        ./home-manager/main/home.nix 
+      ];
+      extraSpecialArgs = {
+        inherit inputs username;
+      };
+    };
   };
 }
