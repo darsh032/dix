@@ -28,16 +28,6 @@
       ];
     };
 
-    homeConfigurations.basic = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      modules = [ 
-        ./home-manager/basic/home.nix 
-      ];
-      extraSpecialArgs = {
-        inherit inputs username;
-      };
-    };
-
     homeConfigurations.main = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [ 
