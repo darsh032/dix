@@ -17,6 +17,9 @@
 
 # ProtonPass
 			{ id = "ghmbeldphafepmbegfdlkpapadhbakde"; }
+
+			# ProtonVpn
+			{ id = "jplgfhpmjnbigmhklmmbgecoobifkmpa"; }
 			];
 		};
 	};	
