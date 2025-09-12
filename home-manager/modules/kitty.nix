@@ -3,6 +3,8 @@
 {
     programs.kitty = {
 	enable = true;
-	confirm_close = false;
+	settings = {
+	    confirm_os_window_close = false;
+	};
     };
 }
