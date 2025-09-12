@@ -2,7 +2,10 @@
 
 {
 	options = {
-		browser.enable = lib.mkEnableOption "installs chromium with my favorite extensions";
+	browser.enable = lib.mkEnableOption "enables chromium with my favorite extensions" // {
+      	    default = true;
+        };
+
 	};
 
 	config = lib.mkIf config.browser.enable {

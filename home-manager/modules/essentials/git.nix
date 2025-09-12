@@ -2,7 +2,9 @@
 
 {
     options = {
-	essentialsGit.enable = lib.mkEnableOption "enables git";
+	essentialsGit.enable = lib.mkEnableOption "enables git" // {
+      	    default = true;
+        };
     };
 
     config = lib.mkIf config.essentialsGit.enable {
