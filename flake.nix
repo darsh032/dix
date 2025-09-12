@@ -27,10 +27,10 @@
       ];
     };
 
-    homeConfigurations.daily = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.gnome-basic = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [ 
-        ./home-manager/daily/home.nix 
+        ./home-manager/gnome-basic/home.nix 
       ];
       extraSpecialArgs = {
         inherit inputs;
