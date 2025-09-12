@@ -13,6 +13,7 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: 
   let
+  username = "awesome";
   system = "x86_64-linux";
   pkgs = import nixpkgs {
     inherit system;
@@ -21,19 +22,19 @@
   in
   {
     nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
+      specialArgs = {inherit inputs username;};
       modules = [
         ./hosts/omen/configuration.nix
       ];
     };
 
-    homeConfigurations.gnome-basic = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.basic = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [ 
-        ./home-manager/gnome-basic/home.nix 
+        ./home-manager/basic/home.nix 
       ];
       extraSpecialArgs = {
-        inherit inputs;
+        inherit inputs username;
       };
     };
   };

@@ -1,13 +1,12 @@
-{ config, ... }:
+{ config, username, ... }:
 
 {
-    home.username = "awesome";
-    home.homeDirectory = "/home/awesome";
+    home.username = "${username}";
+    home.homeDirectory = "/home/${username}";
 
     # Import your modules
     imports = [
-    	../modules/chromium.nix
-	../modules/git.nix
+	../modules/essentials.nix
 	./packages.nix
     ];
 
