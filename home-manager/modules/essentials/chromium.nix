@@ -1,14 +1,20 @@
-{ pkgs, ... }:
+{ pkgs, lib, config... }:
 
 {
-	programs.chromium = {
-		enable = true;
-		extensions = [
-			# TotalBlock
+	options = {
+		browser.enable = lib.mkEnableOption "installs chromium with my favorite extensions";
+	};
+
+	config = lib.mkIf config.browser.enable {
+		programs.chromium = {
+			enable = true;
+			extensions = [
+# TotalBlock
 			{ id = "gekdekpbfehejjiecgonmgmepbdnaggp"; }
 
-			# ProtonPass
+# ProtonPass
 			{ id = "ghmbeldphafepmbegfdlkpapadhbakde"; }
-		];
-	};
+			];
+		};
+	};	
 }
