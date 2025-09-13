@@ -78,7 +78,7 @@ animation = [
 "zoomFactor,    1,     7,     quick"
 ];
 
-}
+};
 
 dwindle = {
     pseudotile = true ;
