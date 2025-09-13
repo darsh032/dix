@@ -20,15 +20,21 @@
   } @ inputs: let
     username = "awesome";
     system = "x86_64-linux";
+    overlays = [
+      (final: prev: {
+        neovim = (inputs.nvf.lib.neovimConfiguration {
+          pkgs = prev;
+          modules = [ ./nvim/nvf.nix ];
+        }).neovim;
+      })
+    ];
     pkgs = import nixpkgs {
-      inherit system;
+      inherit system overlays;
       config.allowUnfree = true;
     };
   in {
-    packages.${system}.default = (inputs.nvf.lib.neovimConfiguration {
-	pkgs = nixpkgs.legacyPackages.${system};
-	modules = [ ./nvim/nvf.nix ];
-    }).neovim;
+
+    packages.${system}.nvf = pkgs.neovim;
 
     nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs username;};
