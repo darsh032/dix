@@ -7,7 +7,7 @@
 	};
     };
 
-    config = lib.mkIf moduleKitty.enable {
+    config = lib.mkIf config.moduleKitty.enable {
     	programs.kitty = {
 	    enable = true;
 
