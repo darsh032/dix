@@ -17,48 +17,48 @@
                 nixpkgs,
                 home-manager,
                 ...
-        } @ inputs: let
-        username = "awesome";
-        system = "x86_64-linux";
-        overlays = [
-                (final: prev: {
-                 neovim = (inputs.nvf.lib.neovimConfiguration {
-                                 pkgs = prev;
-                                 modules = [ ./nvim/nvf.nix ];
-                                 }).neovim;
-                 })
-        ];
-        pkgs = import nixpkgs {
-                inherit system overlays;
-                config.allowUnfree = true;
-        };
-        in {
-
-                packages.${system}.nvf = pkgs.neovim;
-
-                nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
-                        specialArgs = {inherit inputs username;};
-                        modules = [
-                        {
-# nixpkgs.overlays = overlays;
-nixpkgs.config.allowUnfree = true;
-                        }
-                        ./nixos-modules/default.nix
-                        ./system/default.nix
-                        ./hosts/omen/configuration.nix
+                } @ inputs: let
+                        username = "awesome";
+                        system = "x86_64-linux";
+                        overlays = [
+                                (final: prev: {
+                                        neovim = (inputs.nvf.lib.neovimConfiguration {
+                                                pkgs = prev;
+                                                modules = [ ./nvim/nvf.nix ];
+                                        }).neovim;
+                                })
                         ];
-                };
+                        pkgs = import nixpkgs {
+                                inherit system overlays;
+                                config.allowUnfree = true;
+                        };
+                in {
 
-                homeConfigurations.main = home-manager.lib.homeManagerConfiguration {
-                        inherit pkgs;
-                        modules = [
-                                ./home-manager/main/home.nix
-                                ./home-manager/modules/default.nix
+                        packages.${system}.nvf = pkgs.neovim;
 
-                        ];
-                        extraSpecialArgs = {
-                                inherit inputs username;
+                        nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
+                                specialArgs = {inherit inputs username;};
+                                modules = [
+                                        {
+                                                # nixpkgs.overlays = overlays;
+                                                nixpkgs.config.allowUnfree = true;
+                                        }
+                                        ./nixos-modules/default.nix
+                                        ./system/default.nix
+                                        ./hosts/omen/configuration.nix
+                                ];
+                        };
+
+                        homeConfigurations.main = home-manager.lib.homeManagerConfiguration {
+                                inherit pkgs;
+                                modules = [
+                                        ./home-manager/main/home.nix
+                                        ./home-manager/modules/default.nix
+
+                                ];
+                                extraSpecialArgs = {
+                                        inherit inputs username;
+                                };
                         };
                 };
-        };
 }
