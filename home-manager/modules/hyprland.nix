@@ -58,8 +58,6 @@ bezier = [
 ];
 
 animation = [
-""
-""
 "global,        1,     10,    default"
 "border,        1,     5.39,  easeOutQuint"
 "windows,       1,     4.79,  easeOutQuint"
