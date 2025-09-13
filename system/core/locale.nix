@@ -5,7 +5,7 @@
     };
   };
 
-  config = lib.mkIf systemLocale.enable {
+  config = lib.mkIf config.systemLocale.enable {
     i18n.defaultLocale = "en_US.UTF-8";
 
     i18n.extraLocaleSettings = {
