@@ -1,4 +1,4 @@
-{ pkgs, config, lib ... }: {
+{ pkgs, config, lib, ... }: {
    options = {
      moduleCursor = lib.mkEnableOption "enables cursor" // {
        default = true;
