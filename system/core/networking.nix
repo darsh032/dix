@@ -1,6 +1,6 @@
 { config, lib, ... }: {
    options = {
-     systemNetworking.enable = mkEnableOption "enables networknig" // {
+     systemNetworking.enable = lib.mkEnableOption "enables networknig" // {
        default = true;
      };
    };
