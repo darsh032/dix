@@ -43,6 +43,8 @@
 # nixpkgs.overlays = overlays;
 nixpkgs.config.allowUnfree = true;
                         }
+                        ./nixos-modules/default.nix
+                        ./system/default.nix
                         ./hosts/omen/configuration.nix
                         ];
                 };
@@ -51,6 +53,7 @@ nixpkgs.config.allowUnfree = true;
                         inherit pkgs;
                         modules = [
                                 ./home-manager/main/home.nix
+                                ./home-manager/modules/default.nix
 
                         ];
                         extraSpecialArgs = {

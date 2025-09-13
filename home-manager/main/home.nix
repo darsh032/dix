@@ -3,7 +3,6 @@
     home.homeDirectory = "/home/${username}";
 
     imports = [
-	../modules/default.nix
 	./packages.nix
     ];
 
