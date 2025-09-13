@@ -7,6 +7,7 @@ monitor = ",preferred,auto,auto";
 "$terminal" = "kitty";
 "$fileManager" = "dolphin";
 "$menu" = "wofi --show drun";
+"$mainMod" = "SUPER";
 
 env = [
 "XCURSOR_SIZE,24"
@@ -21,7 +22,7 @@ general = {
     "col.inactive_border" = "rgba(595959aa)";
     resize_on_border = false;
     allow_tearing = false;
-    layout = dwindle;
+    layout = "dwindle";
 };
 
 decoration = {
@@ -34,7 +35,7 @@ decoration = {
         enabled = true;
         range = 4;
         render_power = 3;
-        color = rgba(1a1a1aee);
+        color = "rgba(1a1a1aee)";
     };
 
     blur = {
@@ -86,7 +87,7 @@ dwindle = {
 };
 
 master = {
-    new_status = master;
+    new_status = "master";
 };
 
 misc = {
@@ -95,7 +96,7 @@ misc = {
 };
 
 input = {
-    kb_layout = us;
+    kb_layout = "us";
 
     follow_mouse = 1;
 
@@ -107,16 +108,15 @@ input = {
 };
 
 
-gesture = 3, horizontal, workspace;
+"gesture" = "3, horizontal, workspace";
 
 
 
 device = {
-    name = epic-mouse-v1;
+    name = "epic-mouse-v1";
     sensitivity = -0.5;
 };
 
-$mainMod = SUPER ;
 
 
 bind = [
