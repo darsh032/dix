@@ -4,34 +4,44 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
+    nvf.url = "github:notashelf/nvf";
 
     home-manager = {
-	url = "github:nix-community/home-manager";
-	inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
-  let
-  username = "awesome";
-  system = "x86_64-linux";
-  pkgs = import nixpkgs {
-    inherit system;
-    config.allowUnfree = true;
-  };
-  in
-  {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    username = "awesome";
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+  in {
+    packages.${system}.default = ({
+	pkgs = nixpkgs.legacyPackages.${system};
+	modules = [ ./nvim/nvf.nix ];
+    }).neovim;
+
     nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs username;};
       modules = [
-        ./hosts/omen/configuration.nix
+        ./hosts/omen/omen.nix
       ];
     };
 
     homeConfigurations.main = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-      modules = [ 
-        ./home-manager/main/home.nix 
+      modules = [
+        ./home-manager/main/home.nix
+	inputs.nvf.homeManagerModules.default
       ];
       extraSpecialArgs = {
         inherit inputs username;
