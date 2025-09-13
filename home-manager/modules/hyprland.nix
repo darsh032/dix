@@ -87,7 +87,7 @@
 				};
 
                                 exec-once = [
-                                        "hyprctl setcursor Bibata-Modern-Classic 19";
+                                        "hyprctl setcursor Bibata-Modern-Classic 19"
                                 ];
 
 				dwindle = {
