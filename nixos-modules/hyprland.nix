@@ -3,7 +3,7 @@
     moduleHyprland = lib.mkEnableOption "enables hyprland" // {
       default = true;
     };
-  }
+  };
 
   config = lilb.mkIf enable.moduleHyprland.enable {
      programs.hyprland = {
