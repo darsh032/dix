@@ -86,6 +86,10 @@
 
 				};
 
+                                exec-once = [
+                                        "hyprctl setcursor Bibata-Modern-Classic 19";
+                                ];
+
 				dwindle = {
 					pseudotile = true ;
 					preserve_split = true;
