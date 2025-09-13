@@ -6,8 +6,7 @@
 
     # Import your modules
     imports = [
-	../modules/essentials.nix
-	../modules/kitty.nix
+	../modules/default.nix
 	./packages.nix
     ];
 
