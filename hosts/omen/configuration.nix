@@ -1,7 +1,7 @@
 { config, pkgs, username, ... }: {
   imports = [
       ./hardware-configuration.nix
-      ../modules/hyprland.nix 
+      ../../NixosModules/hyprland.nix 
     ];
 
   boot = {
