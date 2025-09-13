@@ -1,6 +1,4 @@
-{ config, lib, ... }:
-
-{
+{ config, lib, ... }: {
     options = {
 	moduleKitty.enable = lib.mkEnableOption "Enables kitty" // {
             default = true;

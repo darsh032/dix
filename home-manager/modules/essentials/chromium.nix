@@ -1,6 +1,4 @@
-{ pkgs, lib, config, ... }:
-
-{
+{ pkgs, lib, config, ... }: {
 	options = {
 	browser.enable = lib.mkEnableOption "enables chromium with my favorite extensions" // {
       	    default = true;
