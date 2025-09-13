@@ -5,7 +5,7 @@
     };
   };
 
-  config = lib.mkIf systemBoot.enable {
+  config = lib.mkIf config.systemBoot.enable {
      boot = {
        loader = {
          systemd-boot.enable = true;
