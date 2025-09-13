@@ -1,10 +1,18 @@
-{ ... }: {
-boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
+{ config, lib, ... }: {
+  options = {
+    systemBoot.enable = lib.mkEnableOption "enables systemdBoot" // {
+      default = true;
     };
+  };
 
-    plymouth.enable = true;
+  config = lib.mkIf systemBoot.enable {
+     boot = {
+       loader = {
+         systemd-boot.enable = true;
+         efi.canTouchEfiVariables = true;
+       };
+
+       plymouth.enable = true;
+     };
   };
 }
