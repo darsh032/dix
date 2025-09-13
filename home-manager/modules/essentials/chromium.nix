@@ -6,7 +6,7 @@
 
 	};
 
-	config = lib.mkIf config.browser.enable {
+	config = lib.mkIf config.moduleBrowser.enable {
 		programs.chromium = {
 			enable = true;
 			extensions = [

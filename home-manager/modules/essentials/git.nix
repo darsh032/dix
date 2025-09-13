@@ -5,7 +5,7 @@
         };
     };
 
-    config = lib.mkIf config.essentialsGit.enable {
+    config = lib.mkIf config.moduleGit.enable {
     	programs.git = {
 	    enable = true;
             userName = "Darsh yadav";
