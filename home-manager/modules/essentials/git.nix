@@ -1,6 +1,6 @@
 { config, lib, ... }: {
     options = {
-	essentialsGit.enable = lib.mkEnableOption "enables git" // {
+	moduleGit.enable = lib.mkEnableOption "enables git" // {
       	    default = true;
         };
     };
