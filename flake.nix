@@ -25,7 +25,7 @@
       config.allowUnfree = true;
     };
   in {
-    packages.${system}.default = ({
+    packages.${system}.default = (inputs.nvf.lib.neovimConfiguration {
 	pkgs = nixpkgs.legacyPackages.${system};
 	modules = [ ./nvim/nvf.nix ];
     }).neovim;
@@ -33,7 +33,7 @@
     nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs username;};
       modules = [
-        ./hosts/omen/omen.nix
+        ./hosts/omen/configuration.nix
       ];
     };
 
@@ -41,7 +41,7 @@
       inherit pkgs;
       modules = [
         ./home-manager/main/home.nix
-	inputs.nvf.homeManagerModules.default
+
       ];
       extraSpecialArgs = {
         inherit inputs username;
