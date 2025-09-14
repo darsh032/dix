@@ -86,8 +86,8 @@
 
 				};
 
-                                exec-once = [
-                                        "hyprctl setcursor Bibata-Modern-Classic 19"
+                                exec-once = lib.mkMerge [
+                                        [ "hyprctl setcursor Bibata-Modern-Classic 19" ]
                                 ];
 
 				dwindle = {

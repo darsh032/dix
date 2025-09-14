@@ -33,6 +33,98 @@
         "type": "github"
       }
     },
+    "caelestia-cli": {
+      "inputs": {
+        "caelestia-shell": "caelestia-shell",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757772762,
+        "narHash": "sha256-7m4hqYSgRe68lkzHFLb1GN5gQac4X4akKfKgFvhj/34=",
+        "owner": "caelestia-dots",
+        "repo": "cli",
+        "rev": "62e7911864ce6ec8a0b371735cf640d81821100e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "caelestia-dots",
+        "repo": "cli",
+        "type": "github"
+      }
+    },
+    "caelestia-cli_2": {
+      "inputs": {
+        "caelestia-shell": [
+          "caelestia-shell"
+        ],
+        "nixpkgs": [
+          "caelestia-shell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757772762,
+        "narHash": "sha256-7m4hqYSgRe68lkzHFLb1GN5gQac4X4akKfKgFvhj/34=",
+        "owner": "caelestia-dots",
+        "repo": "cli",
+        "rev": "62e7911864ce6ec8a0b371735cf640d81821100e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "caelestia-dots",
+        "repo": "cli",
+        "type": "github"
+      }
+    },
+    "caelestia-shell": {
+      "inputs": {
+        "caelestia-cli": [
+          "caelestia-cli"
+        ],
+        "nixpkgs": [
+          "caelestia-cli",
+          "nixpkgs"
+        ],
+        "quickshell": "quickshell"
+      },
+      "locked": {
+        "lastModified": 1757726711,
+        "narHash": "sha256-nihMIyW+IN01jLH+XhRDJ4V/9ulD/iqi0dvA7gYlclA=",
+        "owner": "caelestia-dots",
+        "repo": "shell",
+        "rev": "a57dd9343a2643f73f3994dc230b824617f89ecf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "caelestia-dots",
+        "repo": "shell",
+        "type": "github"
+      }
+    },
+    "caelestia-shell_2": {
+      "inputs": {
+        "caelestia-cli": "caelestia-cli_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "quickshell": "quickshell_2"
+      },
+      "locked": {
+        "lastModified": 1757840708,
+        "narHash": "sha256-JPl4Lkl+eEhpXEpSMP+aBRwUoZ3zFZ1ordcmtb+m28c=",
+        "owner": "caelestia-dots",
+        "repo": "shell",
+        "rev": "74272292979a9e9727444813d1af569c1a33cd9b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "caelestia-dots",
+        "repo": "shell",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -495,8 +587,53 @@
         "type": "github"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "caelestia-cli",
+          "caelestia-shell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1756981260,
+        "narHash": "sha256-GhuD9QVimjynHI0OOyZsqJsnlXr2orowh9H+HYz4YMs=",
+        "ref": "refs/heads/master",
+        "rev": "6eb12551baf924f8fdecdd04113863a754259c34",
+        "revCount": 672,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
+    "quickshell_2": {
+      "inputs": {
+        "nixpkgs": [
+          "caelestia-shell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1756981260,
+        "narHash": "sha256-GhuD9QVimjynHI0OOyZsqJsnlXr2orowh9H+HYz4YMs=",
+        "ref": "refs/heads/master",
+        "rev": "6eb12551baf924f8fdecdd04113863a754259c34",
+        "revCount": 672,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
     "root": {
       "inputs": {
+        "caelestia-cli": "caelestia-cli",
+        "caelestia-shell": "caelestia-shell_2",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs_2",

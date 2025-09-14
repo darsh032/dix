@@ -6,6 +6,16 @@
                 hyprland.url = "github:hyprwm/Hyprland";
                 nvf.url = "github:notashelf/nvf";
 
+                caelestia-shell = {
+                  url = "github:caelestia-dots/shell";
+                  inputs.nixpkgs.follows = "nixpkgs";
+                };
+
+                caelestia-cli = {
+                  url = "github:caelestia-dots/cli";
+                  inputs.nixpkgs.follows = "nixpkgs";
+                };
+
                 home-manager = {
                         url = "github:nix-community/home-manager";
                         inputs.nixpkgs.follows = "nixpkgs";
@@ -57,7 +67,7 @@
 
                                 ];
                                 extraSpecialArgs = {
-                                        inherit inputs username;
+                                        inherit inputs username system;
                                 };
                         };
                 };

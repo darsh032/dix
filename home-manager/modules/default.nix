@@ -7,5 +7,6 @@
         ./cursor.nix
         ./fish.nix
         ./starship.nix
+        ./caelestia.nix
    ];
 }
