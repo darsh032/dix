@@ -27,7 +27,8 @@
         directory = {
           format = "[$path]($style)";
           truncation_length = 2;
-          style = "bg:#262626 fg:#9b9b9b";
+          style = "bg:#262626 fg:white";
+          home_symbol = " ";
         };
       };
     };
