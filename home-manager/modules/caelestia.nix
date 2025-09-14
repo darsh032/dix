@@ -13,9 +13,16 @@
 
     wayland.windowManager.hyprland = {
       settings = {
-         exec-once = lib.mkMerge [
-           [ "caelestia shell" ]
-         ]; 
+        exec-once = lib.mkMerge [
+          [ "caelestia shell" ]
+        ]; 
+
+        bind = lib.mkMerge [
+          [ "SUPER, SUPER_L, exec, caelestia shell drawers toggle launcher" ]
+          [ "$mainMod Ctrl, R, exec, caelestia-shell kill;caelestia shell" ]
+          [ "$mainMod Alt, C, exec, caelestia shell notifs clear" ]
+          [ "$mainMod, L, global, caelestia:lock" ]
+        ];
       };
     };
   };
