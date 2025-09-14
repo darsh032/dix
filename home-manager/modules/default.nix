@@ -5,5 +5,6 @@
 	./kitty.nix
 	./hyprland.nix
         ./cursor.nix
+        ./fish.nix
    ];
 }
