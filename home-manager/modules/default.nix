@@ -6,5 +6,6 @@
 	./hyprland.nix
         ./cursor.nix
         ./fish.nix
+        ./starship.nix
    ];
 }
