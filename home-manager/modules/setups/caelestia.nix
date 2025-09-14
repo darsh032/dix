@@ -21,9 +21,9 @@
         ]; 
 
         bind = lib.mkMerge [
-          [ "SUPER, SUPER_L, exec, caelestia shell drawers toggle launcher" ]
+          [ "SUPER, SUPER_L, global, caelestia:launcher" ]
           [ "$mainMod Ctrl, R, exec, caelestia-shell kill;caelestia shell" ]
-          [ "$mainMod Alt, C, exec, caelestia shell notifs clear" ]
+          [ "$mainMod Alt, C, global, caelestia:clearNotifs" ]
           [ "$mainMod, L, global, caelestia:lock" ]
           [ "$mainMod Shift, S, exec,  caelestia screenshot -r -f" ]
           [ "$mainMod, V, exec, pkill fuzzel || caelestia clipboard" ]
