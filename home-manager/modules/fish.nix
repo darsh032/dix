@@ -1,6 +1,6 @@
 { lib, config, ... }: {
   options = {
-    moduleFish = lib.mkEnableOption "enables fish" // {
+    moduleFish.enable = lib.mkEnableOption "enables fish" // {
       default = true;
     };
   }; 
