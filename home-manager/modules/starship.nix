@@ -9,6 +9,18 @@
     programs.starship = {
       enable = true;
       enableFishIntegration = true;
+      
+      settings = {
+        add_newline = true;
+        
+        format = lib.concatStrings [
+          "[](bold blue)"
+        ];
+
+        right_format = lib.concatStrings [
+          "$all"
+        ];
+      };
     };
   };
 }

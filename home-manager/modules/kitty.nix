@@ -1,4 +1,4 @@
-{ config, lib, ... }: {
+{ pkgs, config, lib, ... }: {
     options = {
 	moduleKitty.enable = lib.mkEnableOption "Enables kitty" // {
             default = true;
@@ -12,7 +12,15 @@
 	    settings = {
  	        confirm_os_window_close = 0;
                 shell = "fish";
+
+                font_family = "family='JetBrainsMono Nerd Font'";
 	    };
         };
+
+        home.packages = with pkgs; [
+          nerd-fonts.jetbrains-mono
+        ];
+
+        fonts.fontconfig.enable = true;
     };
 }
