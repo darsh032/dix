@@ -14,6 +14,7 @@
                 shell = "fish";
 
                 font_family = "family='JetBrainsMono Nerd Font'";
+                font_size = "18";
 	    };
         };
 
