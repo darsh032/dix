@@ -128,7 +128,7 @@
                                         [ "$mainMod, C, killactive," ]
                                         [ "$mainMod, M, exit," ]
                                         [ "$mainMod, E, exec, $fileManager" ]
-                                        [ "$mainMod, V, togglefloating," ]
+                                        [ "$mainMod, Space, togglefloating," ]
                                         [ "$mainMod, R, exec, $menu" ]
                                         [ "$mainMod, P, pseudo, " ]
                                         [ "$mainMod, J, togglesplit, " ]

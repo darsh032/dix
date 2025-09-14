@@ -9,12 +9,17 @@
     home.packages = with pkgs; [
       inputs.caelestia-shell.packages.${system}.default
       inputs.caelestia-cli.packages.${system}.default
+      libnotify
+      wl-clipboard
+      cliphist
     ];
 
     wayland.windowManager.hyprland = {
       settings = {
         exec-once = lib.mkMerge [
           [ "caelestia shell" ]
+          [ "wl-paste --type text --watch cliphist store" ]
+          [ "wl-paste --type image --watch cliphist store" ]
         ]; 
 
         bind = lib.mkMerge [
@@ -23,6 +28,9 @@
           [ "$mainMod Alt, C, exec, caelestia shell notifs clear" ]
           [ "$mainMod, L, global, caelestia:lock" ]
           [ "$mainMod Shift, S, exec,  caelestia screenshot -r -f" ]
+          [ "$mainMod, V, exec, pkill fuzzel || caelestia clipboard" ]
+          [ "$mainMod Alt, V, exec, pkill fuzzel || caelestia clipboard -d" ]
+          [ "$mainMod, ., exec, pkill fuzzel || caelestia emoji -p" ]
         ];
       };
     };
