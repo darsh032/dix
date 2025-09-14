@@ -1,8 +1,6 @@
 { config, lib, inputs, pkgs, system, ... }: {
   options = {
-    moduleCaelestia.enable = lib.mkEnableOption "enables caelestia" // {
-      default = true;
-    };
+    moduleCaelestia.enable = lib.mkEnableOption "enables caelestia";
   };
 
   config = lib.mkIf config.moduleCaelestia.enable {

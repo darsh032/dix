@@ -7,6 +7,7 @@
         ./cursor.nix
         ./fish.nix
         ./starship.nix
-        ./caelestia.nix
+        ./setups/caelestia.nix
+        ./setups/asztal.nix
    ];
 }

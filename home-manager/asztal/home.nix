@@ -6,7 +6,7 @@
 	./packages.nix
     ];
 
-    moduleCaelestia.enable = true;
+    moduleAsztal.enable = true;
 
     home.sessionVariables = {
         EDITOR = "nvim";

@@ -5,6 +5,7 @@
                 nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
                 hyprland.url = "github:hyprwm/Hyprland";
                 nvf.url = "github:notashelf/nvf";
+                asztal.url = "github:aylur/dotfiles/pre-astal";
 
                 caelestia-shell = {
                   url = "github:caelestia-dots/shell";
@@ -63,6 +64,19 @@
                                 inherit pkgs;
                                 modules = [
                                         ./home-manager/main/home.nix
+                                        ./home-manager/modules/default.nix
+
+                                ];
+                                extraSpecialArgs = {
+                                        inherit inputs username system;
+                                };
+                        };
+
+
+                        homeConfigurations.asztal = home-manager.lib.homeManagerConfiguration {
+                                inherit pkgs;
+                                modules = [
+                                        ./home-manager/asztal/home.nix
                                         ./home-manager/modules/default.nix
 
                                 ];
