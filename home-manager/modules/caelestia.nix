@@ -22,6 +22,7 @@
           [ "$mainMod Ctrl, R, exec, caelestia-shell kill;caelestia shell" ]
           [ "$mainMod Alt, C, exec, caelestia shell notifs clear" ]
           [ "$mainMod, L, global, caelestia:lock" ]
+          [ "$mainMod Shift, S, exec,  caelestia screenshot -r -f" ]
         ];
       };
     };

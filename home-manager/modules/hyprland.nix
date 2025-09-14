@@ -156,8 +156,8 @@
                                         [ "$mainMod SHIFT, 8, movetoworkspace, 8" ]
                                         [ "$mainMod SHIFT, 9, movetoworkspace, 9" ]
                                         [ "$mainMod SHIFT, 0, movetoworkspace, 10" ]
-                                        [ "$mainMod, S, togglespecialworkspace, thin" ]
-                                        [ "$mainMod SHIFT, S, movetoworkspace, special:thin" ]
+                                        [ "$mainMod, S, togglespecialworkspace, special" ]
+                                        [ "$mainMod Alt, S, movetoworkspace, special" ]
                                         [ "$mainMod, mouse_down, workspace, e+1" ]
                                         [ "$mainMod, mouse_up, workspace, e-1" ]
 						];
