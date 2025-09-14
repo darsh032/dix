@@ -11,15 +11,24 @@
       enableFishIntegration = true;
       
       settings = {
-        add_newline = true;
+        add_newline = false;
         
         format = lib.concatStrings [
-          "[ ](bold blue)"
+          "[ ](bg:#transparent fg:#262626)"
+          "[  ](bg:#262626 fg:blue)" 
+          "$directory"
+          "[ ](fg:#262626 bg:#transparent)"
         ];
 
         right_format = lib.concatStrings [
-          "$all"
+          "$git_status"
         ];
+
+        directory = {
+          format = "[$path]($style)";
+          truncation_length = 2;
+          style = "bg:#262626 fg:#9b9b9b";
+        };
       };
     };
   };
