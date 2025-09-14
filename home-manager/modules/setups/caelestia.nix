@@ -21,7 +21,7 @@
         ]; 
 
         bind = lib.mkMerge [
-          [ "SUPER, SUPER_L, global, caelestia:launcher" ]
+          [ "SUPER, D, global, caelestia:launcher" ]
           [ "$mainMod Ctrl, R, exec, caelestia-shell kill;caelestia shell" ]
           [ "$mainMod Alt, C, global, caelestia:clearNotifs" ]
           [ "$mainMod, L, global, caelestia:lock" ]
