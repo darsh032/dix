@@ -8,6 +8,7 @@
   config = lib.mkIf config.moduleStarship.enable {
     programs.starship = {
       enable = true;
+      enableFishIntegration = true;
     };
   };
 }
