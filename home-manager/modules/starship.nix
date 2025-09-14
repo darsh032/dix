@@ -11,10 +11,10 @@
       enableFishIntegration = true;
       
       settings = {
-        add_newline = false;
+        add_newline = true;
         
         format = lib.concatStrings [
-          "[ ](bg:#transparent fg:#262626)"
+          "[](bg:#transparent fg:#262626)"
           "[  ](bg:#262626 fg:blue)" 
           "$directory"
           "[ ](fg:#262626 bg:#transparent)"

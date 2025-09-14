@@ -15,6 +15,8 @@
 
                 font_family = "family='JetBrainsMono Nerd Font'";
                 font_size = "18";
+
+                window_padding_width = 5;
 	    };
         };
 
