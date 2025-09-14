@@ -14,7 +14,7 @@
         add_newline = true;
         
         format = lib.concatStrings [
-          "[](bold blue)"
+          "[ ](bold blue)"
         ];
 
         right_format = lib.concatStrings [
