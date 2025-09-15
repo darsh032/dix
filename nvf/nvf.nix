@@ -17,7 +17,7 @@
        };
 
        additionalRuntimePaths = [
-         ./lua/init.lua
+         ./nvim
        ];
 
        luaConfigRC.myconfig = /* lua */ ''
