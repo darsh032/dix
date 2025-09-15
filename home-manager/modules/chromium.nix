@@ -1,5 +1,5 @@
 { pkgs, lib, config, ... }: {
-	options = {
+        options = {
 	moduleBrowser.enable = lib.mkEnableOption "enables chromium with my favorite extensions" // {
       	    default = true;
         };
@@ -20,7 +20,7 @@
 			{ id = "jplgfhpmjnbigmhklmmbgecoobifkmpa"; }
 
                         # Dark mode
-                        { id = "gjjbmfigjpgnehjioicaalopaikcnheo"; }
+                        { id = "dmghijelimhndkbmpgbldicpogfkceaj"; }
 			];
 		};
 	};	
