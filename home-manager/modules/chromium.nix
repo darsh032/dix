@@ -1,27 +1,27 @@
 { pkgs, lib, config, ... }: {
         options = {
-	moduleBrowser.enable = lib.mkEnableOption "enables chromium with my favorite extensions" // {
-      	    default = true;
+                moduleBrowser.enable = lib.mkEnableOption "enables chromium with my favorite extensions" // {
+                        default = true;
+                };
+
         };
 
-	};
+        config = lib.mkIf config.moduleBrowser.enable {
+                programs.chromium = {
+                        enable = true;
+                        extensions = [
+                                # TotalBlock
+                                { id = "gekdekpbfehejjiecgonmgmepbdnaggp"; }
 
-	config = lib.mkIf config.moduleBrowser.enable {
-		programs.chromium = {
-			enable = true;
-			extensions = [
-# TotalBlock
-			{ id = "gekdekpbfehejjiecgonmgmepbdnaggp"; }
+                                # ProtonPass
+                                { id = "ghmbeldphafepmbegfdlkpapadhbakde"; }
 
-# ProtonPass
-			{ id = "ghmbeldphafepmbegfdlkpapadhbakde"; }
+                                # ProtonVpn
+                                { id = "jplgfhpmjnbigmhklmmbgecoobifkmpa"; }
 
-			# ProtonVpn
-			{ id = "jplgfhpmjnbigmhklmmbgecoobifkmpa"; }
-
-                        # Dark mode
-                        { id = "dmghijelimhndkbmpgbldicpogfkceaj"; }
-			];
-		};
-	};	
+                                # Dark mode
+                                { id = "dmghijelimhndkbmpgbldicpogfkceaj"; }
+                        ];
+                };
+        };	
 }

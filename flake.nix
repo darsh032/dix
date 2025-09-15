@@ -35,7 +35,7 @@
                                 (final: prev: {
                                         neovim = (inputs.nvf.lib.neovimConfiguration {
                                                 pkgs = prev;
-                                                modules = [ ./nvim/nvf.nix ];
+                                                modules = [ ./nvf/nvf.nix ];
                                         }).neovim;
                                 })
                         ];

@@ -19,5 +19,9 @@
        additionalRuntimePaths = [
          ./lua/init.lua
        ];
+
+       luaConfigRC.myconfig = /* lua */ ''
+      require("myconfig")
+                '';
     };
 }
