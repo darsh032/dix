@@ -18,6 +18,9 @@
 
 			# ProtonVpn
 			{ id = "jplgfhpmjnbigmhklmmbgecoobifkmpa"; }
+
+                        # Dark mode
+                        { id = "gjjbmfigjpgnehjioicaalopaikcnheo"; }
 			];
 		};
 	};	
