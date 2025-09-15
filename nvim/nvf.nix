@@ -15,5 +15,9 @@
            enableTreesitter = true;
            nix.enable = true;
        };
+
+       additionalRuntimePaths = [
+         ./lua/init.lua
+       ];
     };
 }
