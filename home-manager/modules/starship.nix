@@ -9,10 +9,10 @@
     programs.starship = {
       enable = true;
       enableFishIntegration = true;
-      
+
       settings = {
         add_newline = true;
-        
+
         format = lib.concatStrings [
           "[](bg:#transparent fg:#262626)"
           "[  ](bg:#262626 fg:blue)" 
