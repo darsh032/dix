@@ -106,12 +106,11 @@
 
 				input = {
 					kb_layout = "us";
-                                        kb_options = "caps:super";
-
+          kb_options = "caps:super";
+          repeat_rate = 40;         
+          repeat_delay = 200;         
 					follow_mouse = 1;
-
 					sensitivity = 0 ;
-
 					touchpad = {
 						natural_scroll = false;
 					};
