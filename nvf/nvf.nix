@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ ... }: {
   vim = {
     theme = {
       enable = true;
@@ -27,6 +27,10 @@
       indent-blankline.enable = true;
       rainbow-delimiters.enable = true;
     };
+
+    binds = {
+      whichKey.enable = true;
+    };      
 
     treesitter.context = {
       enable = true;
