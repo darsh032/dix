@@ -8,7 +8,10 @@
   config = lib.mkIf config.moduleZellij.enable {
     programs.zellij = {
       enable = true;
-      enableFishIntegration = true;
+
+      settings = {
+        default_shell = "fish";
+      };
     };
   };
 }
