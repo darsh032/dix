@@ -24,5 +24,25 @@
     luaConfigRC.myconfig = /* lua */ ''
       require("myconfig")
       '';
+
+    lazy.plugins = {
+      "nvim-autopairs" = {
+        package = pkgs.vimPlugins.nvim-autopairs;
+        setupModule = "nvim-autopairs";
+        setupOpts = {
+          check_ts = true;
+          fast_wrap = {};
+        };
+      };
+
+      "nvim-treesitter-context" = {
+        package = pkgs.vimPlugins.nvim-treesitter-context;
+        setupModule = "treesitter-context";
+        setupOpts = {
+          enable = true;
+          max_lines = 3;
+        };
+      };
+    };
   };
 }
