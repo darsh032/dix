@@ -5,6 +5,7 @@
 	./kitty.nix
 	./hyprland.nix
         ./cursor.nix
+        ./zellij.nix
         ./fish.nix
         ./starship.nix
         ./setups/caelestia.nix
