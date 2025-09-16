@@ -18,6 +18,10 @@
       rust.enable = true;
     };
 
+    dashboard = {
+      dashboard-nvim.enable = true;
+    };
+
     visuals = {
       fidget-nvim.enable = true;
       indent-blankline.enable = true;
