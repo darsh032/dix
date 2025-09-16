@@ -1,9 +1,7 @@
 { lib, config, pkgs, inputs, ... }: {
   options = {
     moduleSpotify.enable = lib.mkEnableOption "enables spotify" // {    
-      default = true;
-    };
-  };
+      default = true; }; };
 
   config = lib.mkIf config.moduleSpotify.enable {
   programs.spicetify =
@@ -28,6 +26,6 @@
 
       theme = spicePkgs.themes.catppuccin;
       colorScheme = "mocha";
-    }
+    };
   };
 }
