@@ -7,6 +7,7 @@
         ./cursor.nix
         ./zellij.nix
         ./fish.nix
+        ./spotify.nix
         ./starship.nix
         ./setups/caelestia.nix
         ./setups/asztal.nix

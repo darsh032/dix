@@ -6,6 +6,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
     nvf.url = "github:notashelf/nvf";
     asztal.url = "github:aylur/dotfiles/pre-astal";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     caelestia-shell = {
       url = "github:caelestia-dots/shell";
@@ -65,7 +66,7 @@
         modules = [
           ./home-manager/main/home.nix
           ./home-manager/modules/default.nix
-
+          inputs.spicetify-nix.homeManagerModules.default
         ];
         extraSpecialArgs = {
           inherit inputs username system;
