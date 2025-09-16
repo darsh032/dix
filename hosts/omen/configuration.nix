@@ -3,13 +3,6 @@
       ./hardware-configuration.nix
     ];
 
-  hardware.nvidia = {
-  modesetting.enable = true;
-  powerManagement.enable = true;
-  open = false;
-  nvidiaSettings = true;
-  package = config.boot.kernelPackages.nvidiaPackages.stable;
-};
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
