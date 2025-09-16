@@ -7,6 +7,7 @@
     };
 
     statusline.lualine.enable = true;
+    autopairs.nvim-autopairs.enable = true;
     telescope.enable = true;
     autocomplete.nvim-cmp.enable = true;
     lsp.enable = true;
@@ -17,6 +18,15 @@
       rust.enable = true;
     };
 
+    visuals = {
+      fidget-nvim.enable = true;
+      indent-blankline.enable = true;
+    };
+
+    treesitter.context = {
+      enable = true;
+    };
+
     additionalRuntimePaths = [
       ./nvim
     ];
@@ -24,25 +34,5 @@
     luaConfigRC.myconfig = /* lua */ ''
       require("myconfig")
       '';
-
-    lazy.plugins = {
-      "nvim-autopairs" = {
-        package = pkgs.vimPlugins.nvim-autopairs;
-        setupModule = "nvim-autopairs";
-        setupOpts = {
-          check_ts = true;
-          fast_wrap = {};
-        };
-      };
-
-      "nvim-treesitter-context" = {
-        package = pkgs.vimPlugins.nvim-treesitter-context;
-        setupModule = "treesitter-context";
-        setupOpts = {
-          enable = true;
-          max_lines = 3;
-        };
-      };
-    };
   };
 }
