@@ -34,7 +34,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-     hx
+     helix
      home-manager
      git
   ];
