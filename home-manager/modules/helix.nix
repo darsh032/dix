@@ -60,8 +60,6 @@
       };
 
       settings = {
-        theme = "base16_transparent";
-
         editor = {
           line-number = "relative";
           lsp.display-messages = true;
