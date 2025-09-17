@@ -79,7 +79,7 @@
         modules = [
           ./home-manager/asztal/home.nix
           ./home-manager/modules/default.nix
-
+          inputs.spicetify-nix.homeManagerModules.default
         ];
         extraSpecialArgs = {
           inherit inputs username system;
