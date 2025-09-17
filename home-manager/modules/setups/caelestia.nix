@@ -20,15 +20,18 @@
           [ "wl-paste --type image --watch cliphist store" ]
         ]; 
 
-        bind = lib.mkMerge [
-          [ "SUPER, D, global, caelestia:launcher" ]
-          [ "$mainMod Ctrl, R, exec, caelestia-shell kill;caelestia shell" ]
-          [ "$mainMod Alt, C, global, caelestia:clearNotifs" ]
-          [ "$mainMod, L, global, caelestia:lock" ]
-          [ "$mainMod Shift, S, exec,  caelestia screenshot -r -f" ]
-          [ "$mainMod, V, exec, pkill fuzzel || caelestia clipboard" ]
-          [ "$mainMod Alt, V, exec, pkill fuzzel || caelestia clipboard -d" ]
-          [ "$mainMod, ., exec, pkill fuzzel || caelestia emoji -p" ]
+        bind = [
+          "$mainMod Ctrl, R, exec, caelestia-shell kill;caelestia shell"
+          "$mainMod Alt, C, global, caelestia:clearNotifs"
+          "$mainMod, L, global, caelestia:lock"
+          "$mainMod Shift, S, exec,  caelestia screenshot -r -f"
+          "$mainMod, V, exec, pkill fuzzel || caelestia clipboard"
+          "$mainMod Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
+          "$mainMod, ., exec, pkill fuzzel || caelestia emoji -p"
+        ];
+
+        bindi = [
+          "$mainMod, D, global, caelestia:launcher"
         ];
       };
     };
@@ -36,6 +39,6 @@
     programs.fish.shellInit = "
                             cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
 
-                        ";
+      ";
   };
 }
