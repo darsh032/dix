@@ -2,14 +2,9 @@
     home.username = "${username}";
     home.homeDirectory = "/home/${username}";
 
-    imports = [
-	./packages.nix
-    ];
-
     moduleAsztal.enable = true;
 
     home.sessionVariables = {
-        EDITOR = "nvim";
     };
 
     home.sessionPath = [

@@ -32,16 +32,8 @@
     } @ inputs: let
       username = "awesome";
       system = "x86_64-linux";
-      overlays = [
-        (final: prev: {
-          neovim = (inputs.nvf.lib.neovimConfiguration {
-            pkgs = prev;
-            modules = [ ./nvf/nvf.nix ];
-          }).neovim;
-        })
-      ];
       pkgs = import nixpkgs {
-        inherit system overlays;
+        inherit system;
         config.allowUnfree = true;
       };
     in {
@@ -52,7 +44,6 @@
         specialArgs = {inherit inputs username;};
         modules = [
           {
-            # nixpkgs.overlays = overlays;
             nixpkgs.config.allowUnfree = true;
           }
           ./nixos-modules/default.nix

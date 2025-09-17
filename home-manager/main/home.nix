@@ -1,21 +1,18 @@
-{ config, username, ... }: {
-    home.username = "${username}";
-    home.homeDirectory = "/home/${username}";
+{ username, ... }:
+{
+  home.username = "${username}";
+  home.homeDirectory = "/home/${username}";
 
-    imports = [
-	./packages.nix
-    ];
+  moduleCaelestia.enable = true;
 
-    moduleCaelestia.enable = true;
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 
-    home.sessionVariables = {
-        EDITOR = "nvim";
-    };
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
 
-    home.sessionPath = [
-        "$HOME/.local/bin"
-    ];
-
-    programs.home-manager.enable = true;
-    home.stateVersion = "24.11";
+  programs.home-manager.enable = true;
+  home.stateVersion = "24.11";
 }
