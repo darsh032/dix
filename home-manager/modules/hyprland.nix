@@ -124,6 +124,7 @@
 
 
 				bind = lib.mkMerge [
+          [ "$mainMod, F, fullscreen" ]
                                         [ "$mainMod, Q, exec, $terminal" ]
                                         [ "$mainMod, C, killactive," ]
                                         [ "$mainMod, M, exit," ]
