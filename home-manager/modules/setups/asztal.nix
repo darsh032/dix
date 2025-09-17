@@ -1,4 +1,4 @@
-{ config, lib, inputs, pkgs, system, ... }: {
+{ config, lib, inputs, pkgs, ... }: {
   options = {
     moduleAsztal.enable = lib.mkEnableOption "enables caelestia";
   };
