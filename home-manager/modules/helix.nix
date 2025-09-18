@@ -56,7 +56,7 @@
       };
 
       settings = {
-        theme = "catppuccin_mocha";
+        theme = "base16_transparent";
         
         editor = {
           line-number = "relative";
