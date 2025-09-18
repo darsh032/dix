@@ -21,14 +21,14 @@
         ]; 
 
         bind = [
-          "$mainMod Ctrl, R, exec, caelestia-shell kill;caelestia shell"
-          "$mainMod Alt, C, global, caelestia:clearNotifs"
-          "$mainMod, L, global, caelestia:lock"
-          "$mainMod Shift, S, exec,  caelestia screenshot -r -f"
-          "$mainMod, V, exec, pkill fuzzel || caelestia clipboard"
-          "$mainMod Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
-          "$mainMod, ., exec, pkill fuzzel || caelestia emoji -p"
-          "SUPER, SUPER_L, exec, caelestia shell drawers toggle launcher"
+          "Super Ctrl, R, exec, caelestia-shell kill;caelestia shell"
+          "Super Alt, C, global, caelestia:clearNotifs"
+          "Super, L, global, caelestia:lock"
+          "Super Shift, S, exec,  caelestia screenshot -r -f"
+          "Super, V, exec, pkill fuzzel || caelestia clipboard"
+          "Super Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
+          "Super, ., exec, pkill fuzzel || caelestia emoji -p"
+          "SUPER, SUPER_L, global, caelestia:launcher"
         ];
       };
     };

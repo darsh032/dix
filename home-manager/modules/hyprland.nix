@@ -1,4 +1,8 @@
-{ config, lib, ... }: {
+{ pkgs, config, lib, ... }:
+
+let
+  wsaction = "fish -c 'if test "$argv[1]" = -g; set group; set -e argv[1]; end; if test (count $argv) -ne 2; echo "Wrong number of arguments. Usage: wsaction [-g] <dispatcher> <workspace>"; exit 1; end; set -l active_ws (hyprctl activeworkspace -j | jq -r ".id"); if set -q group; hyprctl dispatch $argv[1] (math "($argv[2] - 1) * 10 + $active_ws % 10"); else; hyprctl dispatch $argv[1] (math "floor(($active_ws - 1) / 10) * 10 + $argv[2]"); end' -- "
+in {
   options = {
     moduleHyprland.enable = lib.mkEnableOption "Enables hyprland" // {
       default = true;
@@ -6,6 +10,10 @@
   };
 
   config = lib.mkIf config.moduleHyprland.enable {
+    home.packages = with pkgs; [
+      jq  
+    ]:
+    
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
@@ -14,7 +22,6 @@
         "$terminal" = "kitty";
         "$fileManager" = "dolphin";
         "$menu" = "wofi --show drun";
-        "$mainMod" = "SUPER";
 
         env = [
           "XCURSOR_SIZE,24"
@@ -122,48 +129,48 @@
         };
 
         bind = [
-          "$mainMod, F, fullscreen"
-          "$mainMod, Q, exec, $terminal"
-          "$mainMod, C, killactive,"
-          "$mainMod, M, exit,"
-          "$mainMod, E, exec, $fileManager"
-          "$mainMod, Space, togglefloating,"
-          "$mainMod, R, exec, $menu"
-          "$mainMod, P, pseudo, "
-          "$mainMod, J, togglesplit, "
-          "$mainMod, left, movefocus, l"
-          "$mainMod, right, movefocus, r"
-          "$mainMod, up, movefocus, u"
-          "$mainMod, down, movefocus, d"
-          "$mainMod, 1, workspace, 1"
-          "$mainMod, 2, workspace, 2"
-          "$mainMod, 3, workspace, 3"
-          "$mainMod, 4, workspace, 4"
-          "$mainMod, 5, workspace, 5"
-          "$mainMod, 6, workspace, 6"
-          "$mainMod, 7, workspace, 7"
-          "$mainMod, 8, workspace, 8"
-          "$mainMod, 9, workspace, 9"
-          "$mainMod, 0, workspace, 10"
-          "$mainMod SHIFT, 1, movetoworkspace, 1"
-          "$mainMod SHIFT, 2, movetoworkspace, 2"
-          "$mainMod SHIFT, 3, movetoworkspace, 3"
-          "$mainMod SHIFT, 4, movetoworkspace, 4"
-          "$mainMod SHIFT, 5, movetoworkspace, 5"
-          "$mainMod SHIFT, 6, movetoworkspace, 6"
-          "$mainMod SHIFT, 7, movetoworkspace, 7"
-          "$mainMod SHIFT, 8, movetoworkspace, 8"
-          "$mainMod SHIFT, 9, movetoworkspace, 9"
-          "$mainMod SHIFT, 0, movetoworkspace, 10"
-          "$mainMod, S, togglespecialworkspace, special"
-          "$mainMod Alt, S, movetoworkspace, special"
-          "$mainMod, mouse_down, workspace, e+1"
-          "$mainMod, mouse_up, workspace, e-1"
+          "Super, F, fullscreen"
+          "Super, Q, exec, $terminal"
+          "Super, C, killactive,"
+          "Super, M, exit,"
+          "Super, E, exec, $fileManager"
+          "Super, Space, togglefloating,"
+          "Super, R, exec, $menu"
+          "Super, P, pseudo, "
+          "Super, J, togglesplit, "
+          "Super, left, movefocus, l"
+          "Super, right, movefocus, r"
+          "Super, up, movefocus, u"
+          "Super, down, movefocus, d"
+          "Super, 1, workspace, 1"
+          "Super, 2, workspace, 2"
+          "Super, 3, workspace, 3"
+          "Super, 4, workspace, 4"
+          "Super, 5, workspace, 5"
+          "Super, 6, workspace, 6"
+          "Super, 7, workspace, 7"
+          "Super, 8, workspace, 8"
+          "Super, 9, workspace, 9"
+          "Super, 0, workspace, 10"
+          "Super SHIFT, 1, movetoworkspace, 1"
+          "Super SHIFT, 2, movetoworkspace, 2"
+          "Super SHIFT, 3, movetoworkspace, 3"
+          "Super SHIFT, 4, movetoworkspace, 4"
+          "Super SHIFT, 5, movetoworkspace, 5"
+          "Super SHIFT, 6, movetoworkspace, 6"
+          "Super SHIFT, 7, movetoworkspace, 7"
+          "Super SHIFT, 8, movetoworkspace, 8"
+          "Super SHIFT, 9, movetoworkspace, 9"
+          "Super SHIFT, 0, movetoworkspace, 10"
+          "Super, S, togglespecialworkspace, special"
+          "Super Alt, S, movetoworkspace, special"
+          "Super, mouse_down, workspace, e+1"
+          "Super, mouse_up, workspace, e-1"
         ];
 
         bindm = [
-          "$mainMod, mouse:272, movewindow"
-          "$mainMod, mouse:273, resizewindow"
+          "Super, mouse:272, movewindow"
+          "Super, mouse:273, resizewindow"
         ];
         bindel = [
           ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"

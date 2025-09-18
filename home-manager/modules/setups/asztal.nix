@@ -12,15 +12,15 @@
 
     wayland.windowManager.hyprland = {
       settings = {
-        exec-once = lib.mkMerge [
-          [ "asztal" ]
+        exec-once = [
+           "asztal" 
         ]; 
 
-        bind = lib.mkMerge [
-          [ "SUPER, SUPER_L, exec, asztal -t launcher" ]
-          [ "$mainMod, Tab, exec, asztal -t overview" ]
-          [ "$mainMod Ctrl, R, exec, pkill .ags-wrapped;asztal" ]
-          [ "$mainMod, L, exec, swaylock" ]
+        bind = [
+           "SUPER, SUPER_L, exec, asztal -t launcher" 
+           "$mainMod, Tab, exec, asztal -t overview" 
+           "$mainMod Ctrl, R, exec, pkill .ags-wrapped;asztal" 
+           "$mainMod, L, exec, swaylock" 
         ];
       };
     };
