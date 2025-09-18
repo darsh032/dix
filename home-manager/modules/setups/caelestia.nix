@@ -14,6 +14,8 @@
 
     wayland.windowManager.hyprland = {
       settings = {        
+        source = "~/.config/hypr/scheme/current.conf";
+        
         exec-once = [
           "caelestia shell" 
           "wl-paste --type text --watch cliphist store" 
@@ -30,6 +32,11 @@
           "Super, ., exec, pkill fuzzel || caelestia emoji -p"
           "Super, Super_L, exec, caelestia shell drawers toggle launcher"
         ];
+
+        general = lib.mkForce {
+          "col.active_border" = "rgba($primarye6)";
+          "col.inactive_border" = "rgba($onSurfaceVariant11)";
+        };
       };
     };
 
