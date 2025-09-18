@@ -28,14 +28,11 @@
           "Super, V, exec, pkill fuzzel || caelestia clipboard"
           "Super Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
           "Super, ., exec, pkill fuzzel || caelestia emoji -p"
-          
         ];
-
       };
 
       
-        extraConfig = ''
-            
+        extraConfig = "
 exec = hyprctl dispatch submap global
 submap = global
 
@@ -51,7 +48,7 @@ bindin = Super, mouse:276, global, caelestia:launcherInterrupt
 bindin = Super, mouse:277, global, caelestia:launcherInterrupt
 bindin = Super, mouse_up, global, caelestia:launcherInterrupt
 bindin = Super, mouse_down, global, caelestia:launcherInterrupt
-        '';
+";
     };
 
     programs.fish.shellInit = "
