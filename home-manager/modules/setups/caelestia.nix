@@ -10,7 +10,6 @@
       libnotify
       wl-clipboard
       cliphist
-      gpu-screen-recorder
     ];
 
     wayland.windowManager.hyprland = {
