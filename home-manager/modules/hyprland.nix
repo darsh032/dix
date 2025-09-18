@@ -1,8 +1,4 @@
-{ pkgs, config, lib, ... }:
-
-let
-  wsaction = "fish -c 'if test "$argv[1]" = -g; set group; set -e argv[1]; end; if test (count $argv) -ne 2; echo "Wrong number of arguments. Usage: wsaction [-g] <dispatcher> <workspace>"; exit 1; end; set -l active_ws (hyprctl activeworkspace -j | jq -r ".id"); if set -q group; hyprctl dispatch $argv[1] (math "($argv[2] - 1) * 10 + $active_ws % 10"); else; hyprctl dispatch $argv[1] (math "floor(($active_ws - 1) / 10) * 10 + $argv[2]"); end' -- "
-in {
+{ pkgs, config, lib, ... }: {
   options = {
     moduleHyprland.enable = lib.mkEnableOption "Enables hyprland" // {
       default = true;
@@ -10,10 +6,6 @@ in {
   };
 
   config = lib.mkIf config.moduleHyprland.enable {
-    home.packages = with pkgs; [
-      jq  
-    ]:
-    
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
@@ -93,8 +85,8 @@ in {
 
         };
 
-        exec-once = lib.mkMerge [
-          [ "hyprctl setcursor Bibata-Modern-Classic 19" ]
+        exec-once = [
+          "hyprctl setcursor Bibata-Modern-Classic 19" 
         ];
 
         dwindle = {

@@ -13,11 +13,11 @@
     ];
 
     wayland.windowManager.hyprland = {
-      settings = {
-        exec-once = lib.mkMerge [
-          [ "caelestia shell" ]
-          [ "wl-paste --type text --watch cliphist store" ]
-          [ "wl-paste --type image --watch cliphist store" ]
+      settings = {        
+        exec-once = [
+          "caelestia shell" 
+          "wl-paste --type text --watch cliphist store" 
+          "wl-paste --type image --watch cliphist store" 
         ]; 
 
         bind = [
@@ -34,8 +34,7 @@
     };
 
     programs.fish.shellInit = "
-                            cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
-
-      ";
+      cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
+    ";
   };
 }
