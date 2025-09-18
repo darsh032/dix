@@ -24,24 +24,27 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-    } @ inputs: let
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    let
       username = "awesome";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
-    in {
+    in
+    {
 
       packages.${system}.nvf = pkgs.neovim;
 
       nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs username;};
+        specialArgs = { inherit inputs username; };
         modules = [
           {
             nixpkgs.config.allowUnfree = true;
@@ -64,7 +67,6 @@
         };
       };
 
-
       homeConfigurations.asztal = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
@@ -75,6 +77,14 @@
         extraSpecialArgs = {
           inherit inputs username system;
         };
+      };
+
+      devShells.${system}.rustlings = nixpkgs.legacyPackages.${system}.mkShell {
+        buildInputs = with pkgs; [
+          cargo
+          rustlings
+          rust-analyzer
+        ];
       };
     };
 }
