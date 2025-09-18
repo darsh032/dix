@@ -20,12 +20,6 @@
           "wl-paste --type image --watch cliphist store" 
         ]; 
 
-        exec = [
-          "hyprctl dispatch submap global"
-        ];
-
-        submap = "global";
-
         bind = [
           "Super Ctrl, R, exec, caelestia-shell kill;caelestia shell"
           "Super Alt, C, global, caelestia:clearNotifs"
@@ -37,22 +31,27 @@
           
         ];
 
-        bindi = [
-          "Super, Super_L, global, caelestia:launcher"
-        ];
-        
-        bindin = [
-                    "Super, catchall, global, caelestia:launcherInterrupt"
-          "Super, mouse:272, global, caelestia:launcherInterrupt"
-          "Super, mouse:273, global, caelestia:launcherInterrupt"
-          "Super, mouse:274, global, caelestia:launcherInterrupt"
-          "Super, mouse:275, global, caelestia:launcherInterrupt"
-          "Super, mouse:276, global, caelestia:launcherInterrupt"
-          "Super, mouse:277, global, caelestia:launcherInterrupt"
-          "Super, mouse_up, global, caelestia:launcherInterrupt"
-          "Super, mouse_down, global, caelestia:launcherInterrupt"
-        ];
       };
+
+      
+        extraConfig = ''
+            
+exec = hyprctl dispatch submap global
+submap = global
+
+# ## Shell keybinds
+# Launcher
+bindi = Super, Super_L, global, caelestia:launcher
+bindin = Super, catchall, global, caelestia:launcherInterrupt
+bindin = Super, mouse:272, global, caelestia:launcherInterrupt
+bindin = Super, mouse:273, global, caelestia:launcherInterrupt
+bindin = Super, mouse:274, global, caelestia:launcherInterrupt
+bindin = Super, mouse:275, global, caelestia:launcherInterrupt
+bindin = Super, mouse:276, global, caelestia:launcherInterrupt
+bindin = Super, mouse:277, global, caelestia:launcherInterrupt
+bindin = Super, mouse_up, global, caelestia:launcherInterrupt
+bindin = Super, mouse_down, global, caelestia:launcherInterrupt
+        '';
     };
 
     programs.fish.shellInit = "
