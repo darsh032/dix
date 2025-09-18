@@ -20,6 +20,12 @@
           "wl-paste --type image --watch cliphist store" 
         ]; 
 
+        exec = [
+          "hyprctl dispatch submap global"
+        ];
+
+        submap = global;
+
         bind = [
           "Super Ctrl, R, exec, caelestia-shell kill;caelestia shell"
           "Super Alt, C, global, caelestia:clearNotifs"
@@ -29,6 +35,18 @@
           "Super Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
           "Super, ., exec, pkill fuzzel || caelestia emoji -p"
           "SUPER, SUPER_L, exec, caelestia shell drawers toggle launcher"
+        ];
+
+        bindin = [
+          "Super, catchall, global, caelestia:launcherInterrupt"
+          "Super, mouse:272, global, caelestia:launcherInterrupt"
+          "Super, mouse:273, global, caelestia:launcherInterrupt"
+          "Super, mouse:274, global, caelestia:launcherInterrupt"
+          "Super, mouse:275, global, caelestia:launcherInterrupt"
+          "Super, mouse:276, global, caelestia:launcherInterrupt"
+          "Super, mouse:277, global, caelestia:launcherInterrupt"
+          "Super, mouse_up, global, caelestia:launcherInterrupt"
+          "Super, mouse_down, global, caelestia:launcherInterrupt"
         ];
       };
     };
