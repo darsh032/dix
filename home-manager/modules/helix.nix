@@ -66,7 +66,7 @@
           cursor-shape = {
             insert = "bar";
             normal = "block";
-            select = "bar";
+            select = "block";
           };
         };
       };
