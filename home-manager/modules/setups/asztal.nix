@@ -18,9 +18,9 @@
 
         bind = [
            "SUPER, SUPER_L, exec, asztal -t launcher" 
-           "$mainMod, Tab, exec, asztal -t overview" 
-           "$mainMod Ctrl, R, exec, pkill .ags-wrapped;asztal" 
-           "$mainMod, L, exec, swaylock" 
+           "Super, Tab, exec, asztal -t overview" 
+           "Super Ctrl, R, exec, pkill .ags-wrapped;asztal" 
+           "Super, L, exec, swaylock" 
         ];
       };
     };
