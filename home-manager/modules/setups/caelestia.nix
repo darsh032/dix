@@ -30,7 +30,7 @@
           "Super, V, exec, pkill fuzzel || caelestia clipboard"
           "Super Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
           "Super, ., exec, pkill fuzzel || caelestia emoji -p"
-          "Alt, Alt_L, global, caelestia:launcher"
+          "Hyper, Hyper_L, global, caelestia:launcher"
         ];
 
         general = lib.mkForce {
