@@ -56,9 +56,12 @@
       };
 
       settings = {
+        theme = "ayu_mirage";
+        
         editor = {
           line-number = "relative";
           lsp.display-messages = true;
+          bufferline = "multiple";
 
           cursor-shape = {
             insert = "bar";
