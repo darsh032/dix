@@ -28,27 +28,9 @@
           "Super, V, exec, pkill fuzzel || caelestia clipboard"
           "Super Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
           "Super, ., exec, pkill fuzzel || caelestia emoji -p"
+          "Super, Super_L, exec, caelestia shell drawers toggle launcher"
         ];
       };
-
-      
-        extraConfig = "
-exec = hyprctl dispatch submap global
-submap = global
-
-# ## Shell keybinds
-# Launcher
-bindi = Super, Super_L, global, caelestia:launcher
-bindin = Super, catchall, global, caelestia:launcherInterrupt
-bindin = Super, mouse:272, global, caelestia:launcherInterrupt
-bindin = Super, mouse:273, global, caelestia:launcherInterrupt
-bindin = Super, mouse:274, global, caelestia:launcherInterrupt
-bindin = Super, mouse:275, global, caelestia:launcherInterrupt
-bindin = Super, mouse:276, global, caelestia:launcherInterrupt
-bindin = Super, mouse:277, global, caelestia:launcherInterrupt
-bindin = Super, mouse_up, global, caelestia:launcherInterrupt
-bindin = Super, mouse_down, global, caelestia:launcherInterrupt
-";
     };
 
     programs.fish.shellInit = "
