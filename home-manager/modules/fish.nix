@@ -16,7 +16,7 @@
       shellAliases = {
         "hr" = "home-manager switch --flake";
         "nr" = "sudo nixos-rebuild switch --flake";
-        "rs" = "nix develop ~/dix#rustlings"
+        "rs" = "nix develop ~/dix#rustlings";
       };
     };
   };
