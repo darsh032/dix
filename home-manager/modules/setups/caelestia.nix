@@ -3,6 +3,10 @@
     moduleCaelestia.enable = lib.mkEnableOption "enables caelestia";
   };
 
+  imports = [
+    ./caelestia/shell.nix  
+  ];
+    
   config = lib.mkIf config.moduleCaelestia.enable {
     home.packages = with pkgs; [
       inputs.caelestia-shell.packages.${system}.default
@@ -39,7 +43,7 @@
         };
       };
     };
-
+    
     programs.fish.shellInit = "
       cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
     ";
