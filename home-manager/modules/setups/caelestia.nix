@@ -24,7 +24,7 @@
           "hyprctl dispatch submap global"
         ];
 
-        submap = global;
+        submap = "global";
 
         bind = [
           "Super Ctrl, R, exec, caelestia-shell kill;caelestia shell"
