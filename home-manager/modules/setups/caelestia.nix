@@ -34,11 +34,15 @@
           "Super, V, exec, pkill fuzzel || caelestia clipboard"
           "Super Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
           "Super, ., exec, pkill fuzzel || caelestia emoji -p"
-          "SUPER, SUPER_L, exec, caelestia shell drawers toggle launcher"
+          
         ];
 
+        bindi = [
+          "Super, Super_L, global, caelestia:launcher"
+        ];
+        
         bindin = [
-          "Super, catchall, global, caelestia:launcherInterrupt"
+                    "Super, catchall, global, caelestia:launcherInterrupt"
           "Super, mouse:272, global, caelestia:launcherInterrupt"
           "Super, mouse:273, global, caelestia:launcherInterrupt"
           "Super, mouse:274, global, caelestia:launcherInterrupt"
