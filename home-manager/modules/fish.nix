@@ -6,6 +6,10 @@
   }; 
 
   config = lib.mkIf config.moduleFish.enable {
+    home.sessionVariables = {
+      SHELL = "fish";
+    };
+    
     programs.fish = {
       enable = true;
       
