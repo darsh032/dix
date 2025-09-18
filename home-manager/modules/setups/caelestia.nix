@@ -28,13 +28,8 @@
           "$mainMod, V, exec, pkill fuzzel || caelestia clipboard"
           "$mainMod Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
           "$mainMod, ., exec, pkill fuzzel || caelestia emoji -p"
-
-          "$mainMod, D, global, caelestia:launcher"
+          "SUPER, SUPER_L, exec, caelestia shell drawers toggle launcher"
         ];
-
-
-          
-        
       };
     };
 
