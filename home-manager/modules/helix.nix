@@ -41,10 +41,6 @@
               "NIX_LOG" = "info,simple-completion-language-server=info";
             };
           };
-
-          nil_ls = {
-            "command" = "nil";
-          };
         };
 
         language = [
@@ -63,6 +59,12 @@
         editor = {
           line-number = "relative";
           lsp.display-messages = true;
+
+          cursor-shape = {
+            insert = "bar";
+            normal = "block";
+            select = "bar";
+          };
         };
       };
     };
