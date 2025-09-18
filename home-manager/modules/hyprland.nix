@@ -105,7 +105,7 @@
 
         input = {
           kb_layout = "us";
-          kb_options = "caps:esc";
+          kb_options = "caps:escape";
           repeat_rate = 40;         
           repeat_delay = 200;         
           follow_mouse = 1;
