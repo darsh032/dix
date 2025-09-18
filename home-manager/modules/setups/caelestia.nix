@@ -28,7 +28,7 @@
           "Super, V, exec, pkill fuzzel || caelestia clipboard"
           "Super Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
           "Super, ., exec, pkill fuzzel || caelestia emoji -p"
-          "SUPER, SUPER_L, global, caelestia:launcher"
+          "SUPER, SUPER_L, exec, caelestia shell drawers toggle launcher"
         ];
       };
     };
