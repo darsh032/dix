@@ -56,7 +56,7 @@
       };
 
       settings = {
-        theme = "ayu_mirage";
+        theme = "catppuccin_mocha";
         
         editor = {
           line-number = "relative";
