@@ -29,8 +29,8 @@ let
         };
         "transparency" = {
             "enabled" = true;
-            "base" = 0.85;
-            "layers" = 0.4;
+            "base" = 0.6; # default 0.85
+            "layers" = 0.1; # default 0.4
         };
     };
     "general" = {
