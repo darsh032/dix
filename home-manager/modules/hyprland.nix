@@ -8,7 +8,9 @@ in{
       default = true;
     };
 
-    moduleHyprland.dvorak = lib.mkEnableOption "enables dvorak";
+    moduleHyprland.colemak = lib.mkEnableOption "enables colemak" // {
+      default = true;
+    };
   };
 
   config = lib.mkIf config.moduleHyprland.enable {
@@ -122,10 +124,10 @@ in{
               };
             }
 
-            (lib.mkIf config.moduleHyprland.dvorak {
+            (lib.mkIf config.moduleHyprland.colemak {
               kb_layout = lib.mkForce "us,us";
-              kb_variant = lib.mkForce ",dvorak";
-              resolve_binds_by_sym = 0;
+              kb_variant = lib.mkForce ",colemak_dh_ortho";
+              resolve_binds_by_sym = 1;
               kb_options = lib.mkForce "grp:alt_shift_toggle,${input_options}";
             })
         ];
