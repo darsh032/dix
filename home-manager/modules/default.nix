@@ -2,6 +2,7 @@
   imports = [
     ./chromium.nix
     ./git.nix
+    ./programs.nix
     ./kitty.nix
     ./hyprland.nix
     ./cursor.nix
