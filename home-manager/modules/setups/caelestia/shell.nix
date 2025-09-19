@@ -28,9 +28,9 @@ let
             "scale" = 1;
         };
         "transparency" = {
-            "enabled" = true;
-            "base" = 1; # default 0.85
-            "layers" = 0.25; # default 0.4
+            "enabled" = false;
+            "base" = 0.85; # default 0.85
+            "layers" = 0.4; # default 0.4
         };
     };
     "general" = {
