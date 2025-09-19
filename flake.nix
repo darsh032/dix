@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
-    nvf.url = "github:notashelf/nvf";
     asztal.url = "github:aylur/dotfiles/pre-astal";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
