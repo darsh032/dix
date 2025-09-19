@@ -125,9 +125,11 @@ in{
             (lib.mkIf config.moduleHyprland.dvorak {
               kb_layout = lib.mkForce "us,us";
               kb_variant = lib.mkForce ",dvorak";
+              resolve_binds_by_sym = 1;
               kb_options = lib.mkForce "grp:alt_shift_toggle,${input_options}";
             })
         ];
+        
         device = {
           name = "epic-mouse-v1";
           sensitivity = -0.5;
