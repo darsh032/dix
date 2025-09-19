@@ -1,8 +1,14 @@
-{ pkgs, config, lib, ... }: {
+{ pkgs, config, lib, ... }:
+
+let
+  input_options = "caps:escape";
+in{
   options = {
     moduleHyprland.enable = lib.mkEnableOption "Enables hyprland" // {
       default = true;
     };
+
+    moduleHyprland.dvorak = lib.mkEnableOption "enables dvorak";
   };
 
   config = lib.mkIf config.moduleHyprland.enable {
@@ -103,18 +109,25 @@
           disable_hyprland_logo = false ;
         };
 
-        input = {
-          kb_layout = "us";
-          kb_options = "caps:escape";
-          repeat_rate = 40;         
-          repeat_delay = 200;         
-          follow_mouse = 1;
-          sensitivity = 0 ;
-          touchpad = {
-            natural_scroll = false;
-          };
-        };
+        input = lib.mkMerge [
+            {
+              kb_layout = "us";
+              kb_options = "${input_options}";
+              repeat_rate = 40;
+              repeat_delay = 200;
+              follow_mouse = 1;
+              sensitivity = 0;
+              touchpad = {
+                natural_scroll = false;
+              };
+            }
 
+            (lib.mkIf config.moduleHyprland.dvorak {
+              kb_layout = lib.mkForce "us,us";
+              kb_variant = lib.mkForce "dvorak";
+              kb_options = lib.mkForce "${input_options},grp:alt_shift_toggle";
+            })
+        ];
         device = {
           name = "epic-mouse-v1";
           sensitivity = -0.5;

@@ -3,6 +3,7 @@
     home.homeDirectory = "/home/${username}";
 
     moduleAsztal.enable = true;
+    moduleHyprland.dvorak = true;
 
     home.sessionVariables = {
     };

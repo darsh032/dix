@@ -4,6 +4,7 @@
   home.homeDirectory = "/home/${username}";
 
   moduleCaelestia.enable = true;
+  moduleHyprland.dvorak = true;
 
   home.sessionVariables = {
     EDITOR = "nvim";
