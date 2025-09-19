@@ -125,7 +125,7 @@ in{
             (lib.mkIf config.moduleHyprland.dvorak {
               kb_layout = lib.mkForce "us,us";
               kb_variant = lib.mkForce ",dvorak";
-              resolve_binds_by_sym = 1;
+              resolve_binds_by_sym = 0;
               kb_options = lib.mkForce "grp:alt_shift_toggle,${input_options}";
             })
         ];
