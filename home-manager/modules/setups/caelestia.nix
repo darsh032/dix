@@ -41,6 +41,13 @@
           "col.active_border" = "rgba($primarye6)";
           "col.inactive_border" = "rgba($onSurfaceVariant11)";
         };
+
+        layerrule = [
+          "blur, caelestia-drawers"
+          "animation popin 80%, launcher"
+          "blur, launcher"
+          "ignorealpha 0.57, caelestia-drawers"
+        ];
       };
     };
     

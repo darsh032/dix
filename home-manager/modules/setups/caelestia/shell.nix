@@ -5,7 +5,7 @@ let
         "appearance" = {
         "anim" = {
             "durations" = {
-                "scale" = 1.25;
+                "scale" = 1;
             };
         };
         "font" = {
@@ -28,7 +28,7 @@ let
             "scale" = 1;
         };
         "transparency" = {
-            "enabled" = false;
+            "enabled" = true;
             "base" = 0.85;
             "layers" = 0.4;
         };
