@@ -10,8 +10,8 @@
     programs.chromium = {
       enable = true;
       extensions = [
-        # TotalBlock
-        { id = "gekdekpbfehejjiecgonmgmepbdnaggp"; }
+        # AdSkipper
+        { id = "dinhbmppbaekibhlomcimjbhdhacoael"; }
 
         # ProtonPass
         { id = "ghmbeldphafepmbegfdlkpapadhbakde"; }
