@@ -190,51 +190,6 @@
         "type": "github"
       }
     },
-    "dotfiles-private": {
-      "inputs": {
-        "nixpkgs": [
-          "linkfrg-dotfiles",
-          "nixpkgs"
-        ],
-        "sops-nix": "sops-nix"
-      },
-      "locked": {
-        "lastModified": 1757691185,
-        "narHash": "sha256-lgOmE+yFO9uZSePhQU90zrPQ6OZqNXAtViO+Cn6QugI=",
-        "ref": "refs/heads/main",
-        "rev": "4d6c8051b3515971961ad7ccc89566a625cbefa4",
-        "revCount": 2,
-        "type": "git",
-        "url": "ssh://git@github.com/linkfrg/dotfiles-private.git"
-      },
-      "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/linkfrg/dotfiles-private.git"
-      }
-    },
-    "firefox-addons": {
-      "inputs": {
-        "nixpkgs": [
-          "linkfrg-dotfiles",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "pkgs/firefox-addons",
-        "lastModified": 1757591399,
-        "narHash": "sha256-OlvNzfsqDok0y5PDY+2dK5T53GsxAdm1YGdYHjxAiHM=",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "rev": "b7d4f61ce9db44ba82859e15f6e1c175959948e3",
-        "type": "gitlab"
-      },
-      "original": {
-        "dir": "pkgs/firefox-addons",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "type": "gitlab"
-      }
-    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -322,27 +277,6 @@
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "edc7468e12be92e926847cb02418e649b02b59dd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
-      }
-    },
-    "home-manager_3": {
-      "inputs": {
-        "nixpkgs": [
-          "linkfrg-dotfiles",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1757598712,
-        "narHash": "sha256-5PWVrdMp8u31Q247jqnJcwxKg3MJrs1TadTyTBRVBDY=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "6d7c11a0adee0db21e3a8ef90ae07bb89bc20b8f",
         "type": "github"
       },
       "original": {
@@ -837,71 +771,6 @@
         "type": "github"
       }
     },
-    "ignis": {
-      "inputs": {
-        "ignis-gvc": "ignis-gvc",
-        "nixpkgs": [
-          "linkfrg-dotfiles",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1757521698,
-        "narHash": "sha256-W3D0h3Xk/eKHF7E2iMecStIQjYPCskiQWKWskjx6vfo=",
-        "owner": "ignis-sh",
-        "repo": "ignis",
-        "rev": "7ee293b22253ba2b075c1fc95afcde2a1cc76c03",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ignis-sh",
-        "repo": "ignis",
-        "type": "github"
-      }
-    },
-    "ignis-gvc": {
-      "inputs": {
-        "nixpkgs": [
-          "linkfrg-dotfiles",
-          "ignis",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1754064086,
-        "narHash": "sha256-ft5KvY2OYrWF+jEsfBL/Zx8Iuo2C10C6COk8wHwZw34=",
-        "owner": "ignis-sh",
-        "repo": "ignis-gvc",
-        "rev": "f2c9f10d8b49cc38106a2f07a51ea959c6aa4e63",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ignis-sh",
-        "repo": "ignis-gvc",
-        "type": "github"
-      }
-    },
-    "ignisctl-rs": {
-      "inputs": {
-        "nixpkgs": [
-          "linkfrg-dotfiles",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1754058301,
-        "narHash": "sha256-irXuwCfCvIqJwyH8xkMCkBT+eUs/lTCg0pm087Bh0Us=",
-        "owner": "linkfrg",
-        "repo": "ignisctl-rs",
-        "rev": "99a03a6ce8d1f1f85836b895d5b584ee2b73b27c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "linkfrg",
-        "repo": "ignisctl-rs",
-        "type": "github"
-      }
-    },
     "lf-icons": {
       "flake": false,
       "locked": {
@@ -915,31 +784,6 @@
       "original": {
         "owner": "gokcehan",
         "repo": "lf",
-        "type": "github"
-      }
-    },
-    "linkfrg-dotfiles": {
-      "inputs": {
-        "dotfiles-private": "dotfiles-private",
-        "firefox-addons": "firefox-addons",
-        "home-manager": "home-manager_3",
-        "ignis": "ignis",
-        "ignisctl-rs": "ignisctl-rs",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1757692109,
-        "narHash": "sha256-fSuUH5WjucZpzYyoSS+EJOq5vi4eg8mfZxJ+uitsYsU=",
-        "owner": "linkfrg",
-        "repo": "dotfiles",
-        "rev": "f151d6bc324e1ac3d87407698804d53d65fe4833",
-        "type": "github"
-      },
-      "original": {
-        "owner": "linkfrg",
-        "repo": "dotfiles",
         "type": "github"
       }
     },
@@ -1163,31 +1007,8 @@
         "caelestia-shell": "caelestia-shell_2",
         "home-manager": "home-manager_2",
         "hyprland": "hyprland_2",
-        "linkfrg-dotfiles": "linkfrg-dotfiles",
         "nixpkgs": "nixpkgs_7",
         "spicetify-nix": "spicetify-nix"
-      }
-    },
-    "sops-nix": {
-      "inputs": {
-        "nixpkgs": [
-          "linkfrg-dotfiles",
-          "dotfiles-private",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1757503115,
-        "narHash": "sha256-S9F6bHUBh+CFEUalv/qxNImRapCxvSnOzWBUZgK1zDU=",
-        "owner": "Mic92",
-        "repo": "sops-nix",
-        "rev": "0bf793823386187dff101ee2a9d4ed26de8bbf8c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Mic92",
-        "repo": "sops-nix",
-        "type": "github"
       }
     },
     "spicetify-nix": {
