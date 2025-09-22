@@ -14,7 +14,7 @@
   config = lib.mkIf config.moduleHelix.enable {
     home.packages = with pkgs; [
       simple-completion-language-server
-      nil
+      nixd
     ];
 
     programs.helix = {
@@ -49,19 +49,28 @@
             "auto-format" = true;
             "language-servers" = [
               "scls"
-              "nil_ls"
+              "nixd"
             ];
           }
         ];
       };
 
       settings = {
-        theme = "base16_transparent";
+        theme = "gruvbox";
         
         editor = {
           line-number = "relative";
           lsp.display-messages = true;
+          color-modes = true;
           bufferline = "multiple";
+
+          statusline = {
+            mode = {
+              normal = "NORMAL";
+              insert = "INSERT";
+              select = "SELECT";
+            };
+          };
 
           cursor-shape = {
             insert = "bar";
