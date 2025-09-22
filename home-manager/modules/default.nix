@@ -1,6 +1,6 @@
 { ... }: {
   imports = [
-    ./chromium.nix
+    ./firefox.nix
     ./git.nix
     ./programs.nix
     ./kitty.nix
