@@ -59,6 +59,10 @@
         theme = "gruvbox";
         
         editor = {
+          soft-wrap = {
+            enable = true;
+          };
+
           line-number = "relative";
           lsp.display-messages = true;
           color-modes = true;
@@ -70,6 +74,8 @@
               insert = "INSERT";
               select = "VISUAL";
             };
+
+            right = [ "file-type" "position" ];
           };
 
           cursor-shape = {
