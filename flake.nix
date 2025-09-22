@@ -7,6 +7,11 @@
     asztal.url = "github:aylur/dotfiles/pre-astal";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    linkfrg-dotfiles = {
+      url = "github:linkfrg/dotfiles";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     caelestia-shell = {
       url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -78,6 +83,19 @@
         };
       };
 
+      homeConfigurations.linkfrg = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home-manager/linkfrg/home.nix
+          ./home-manager/modules/default.nix
+          inputs.spicetify-nix.homeManagerModules.default
+          inputs.linkfrg-dotfiles.homeManagerModules.public
+        ];
+        extraSpecialArgs = {
+          inherit inputs username system;
+        };
+      };
+      
       devShells.${system}.rustlings = nixpkgs.legacyPackages.${system}.mkShell {
         buildInputs = with pkgs; [
           cargo

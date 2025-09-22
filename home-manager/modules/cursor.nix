@@ -1,11 +1,11 @@
 { pkgs, config, lib, ... }: {
    options = {
-     moduleCursor = lib.mkEnableOption "enables cursor" // {
+     moduleCursor.enable = lib.mkEnableOption "enables cursor" // {
        default = true;
      };
    };
 
-   config = {
+   config = lib.mkIf config.moduleCursor.enable {
       home.pointerCursor = {
         gtk.enable = true;
         x11.enable = true;
