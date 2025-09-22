@@ -15,6 +15,8 @@
           "dom.security.https_only_mode" = true;
           "startup.homepage_welcome_url" = "about:blank";
           "browser.startup.homepage" = "about:blank";
+          "browser.newtab.url" = "about:blank";
+          "ui.systemUsesDarkTheme" = 2;
         };
 
         extensions = {
@@ -22,7 +24,7 @@
             ublock-origin-upstream
             proton-pass
             proton-vpn
-            simple-dark-vlasak
+            new-tab-override
           ];
         };
         
