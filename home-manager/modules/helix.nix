@@ -92,14 +92,14 @@
 
     xdg.configFile."helix/languages.toml".text = ''
       [[language]]
-      auto-format = true
+      auto-format = false
       language-servers = ["scls", "nixd"]
       name = "nix"
       indent = { tab-width = 2, unit = "  " }
 
       
       [[language]]
-      auto-format = true
+      auto-format = false
       language-servers = ["qmlls", "scls"]
       name = "qml"
       indent = { tab-width = 2, unit = "  " }
