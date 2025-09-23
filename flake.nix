@@ -83,21 +83,21 @@
         };
       };
 
-      
-      devShells.${system}.rustlings = nixpkgs.legacyPackages.${system}.mkShell {
-        buildInputs = with pkgs; [
-          cargo
-          rustlings
-          rust-analyzer
-        ];
-      };
+      devShells.${system} = {
+        default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            cargo
+            rustlings
+            rust-analyzer
+          ];
+        };
 
-      
-      devShells.${system}.quickshell = nixpkgs.legacyPackages.${system}.mkShell {
-        buildInputs = with pkgs; [
-          quickshell
-          kdePackages.qtdeclarative
-        ];
+        quickshell = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            quickshell
+            kdePackages.qtdeclarative
+          ];
+        };
       };
     };
 }
