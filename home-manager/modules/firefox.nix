@@ -1,11 +1,10 @@
-{ pkgs, lib, config, inputs, system, ... }: {
+{ lib, config, inputs, system, ... }: {
   options = {
     moduleFirefox.enable = lib.mkEnableOption "Enables firefox" // {
       default = true;
     };
 
   };
-
   config = lib.mkIf config.moduleFirefox.enable {
     programs.firefox = {
       enable = true;
