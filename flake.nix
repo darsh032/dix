@@ -7,6 +7,11 @@
     asztal.url = "github:aylur/dotfiles/pre-astal";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -94,7 +99,7 @@
 
         quickshell = pkgs.mkShell {
           buildInputs = with pkgs; [
-            quickshell
+            quickshell.packages.${system}.default
             kdePackages.qtdeclarative
           ];
         };
