@@ -91,5 +91,13 @@
           rust-analyzer
         ];
       };
+
+      
+      devShells.${system}.quickshell = nixpkgs.legacyPackages.${system}.mkShell {
+        buildInputs = with pkgs; [
+          quickshell
+          kdePackages.qtdeclarative
+        ];
+      };
     };
 }
