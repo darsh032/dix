@@ -20,8 +20,8 @@
       shellAliases = {
         "hr" = "home-manager switch --flake";
         "nr" = "sudo nixos-rebuild switch --flake";
-        "nd rustlings" = "nix develop ~/dix#rustlings";
-        "nd qs" = "nix develop ~/dix#quickshell";
+        "rsd" = "nix develop ~/dix#rustlings";
+        "qsd" = "nix develop ~/dix#quickshell";
       };
     };
   };
