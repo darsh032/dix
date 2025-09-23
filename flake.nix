@@ -99,7 +99,7 @@
 
         quickshell = pkgs.mkShell {
           buildInputs = with pkgs; [
-            quickshell.packages.${system}.default
+            inputs.quickshell.packages.${system}.default
             kdePackages.qtdeclarative
           ];
         };
