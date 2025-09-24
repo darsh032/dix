@@ -13,8 +13,10 @@
   };
 
   hjem.users.awesome = {
-    ".mozilla/firefox/profiles.ini".source = ./dots/firefox/profiles.ini;
-    ".mozilla/firefox/default/user.js".source = ./dots/firefox/default/user.js;
-    ".mozilla/firefox/default/extensions".source = ./dots/firefox/default/extensions;
+    files = {
+      ".mozilla/firefox/profiles.ini".source = ./dots/firefox/profiles.ini;
+      ".mozilla/firefox/default/user.js".source = ./dots/firefox/default/user.js;
+      ".mozilla/firefox/default/extensions".source = ./dots/firefox/default/extensions;
+    };
   };
 }
