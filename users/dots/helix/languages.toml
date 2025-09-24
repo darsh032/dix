@@ -1,0 +1,29 @@
+[[language]]
+auto-format = false
+language-servers = ["scls", "nixd"]
+name = "nix"
+indent = { tab-width = 2, unit = "  " }
+
+
+[[language]]
+auto-format = false
+language-servers = ["qmlls", "scls"]
+name = "qml"
+indent = { tab-width = 2, unit = "  " }
+
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+featue_citations = false
+feature_paths = true
+feature_snippets = true
+feature_unicode_input = false
+feature_words = true
+max_completion_items = 100
+snippets_first = true
+snippets_inline_by_word_trail = false
+
+[language-server.scls.enviornment]
+LOG_FILE = "/tmp/completion.log"
+NIX_LOG = "info,simple-completion-language-server=info"

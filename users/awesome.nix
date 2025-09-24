@@ -8,15 +8,19 @@
       # Helix general LSPs
       nixd
       rust-analyzer
-      simple-simple-completion-language-server
+      simple-completion-language-server
     ];
   };
 
   hjem.users.awesome = {
     files = {
+      # Firefox
       ".mozilla/firefox/profiles.ini".source = ./dots/firefox/profiles.ini;
       ".mozilla/firefox/default/user.js".source = ./dots/firefox/default/user.js;
       ".mozilla/firefox/default/extensions".source = ./dots/firefox/default/extensions;
+
+      # Helix
+      ".config/helix".source = ./dots/helix;
     };
   };
 }
