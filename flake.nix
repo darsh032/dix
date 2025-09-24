@@ -4,16 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
-    asztal.url = "github:aylur/dotfiles/pre-astal";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    hjem.url = "github:feel-co/hjem";
 
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -26,18 +20,12 @@
       url = "github:caelestia-dots/cli";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
     {
       self,
       nixpkgs,
-      home-manager,
       ...
     }@inputs:
     let
@@ -50,42 +38,16 @@
     in
     {
 
-      packages.${system}.nvf = pkgs.neovim;
 
       nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs username; };
         modules = [
-          {
-            nixpkgs.config.allowUnfree = true;
-          }
+          { nixpkgs.config.allowUnfree = true; }
           ./nixos-modules/default.nix
           ./system/default.nix
           ./hosts/omen/configuration.nix
+          inputs.hjem.nixosModules.default
         ];
-      };
-
-      homeConfigurations.main = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home-manager/main/home.nix
-          ./home-manager/modules/default.nix
-          inputs.spicetify-nix.homeManagerModules.default
-        ];
-        extraSpecialArgs = {
-          inherit inputs username system;
-        };
-      };
-
-      homeConfigurations.asztal = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home-manager/asztal/home.nix
-          ./home-manager/modules/default.nix
-          inputs.spicetify-nix.homeManagerModules.default
-        ];
-        extraSpecialArgs = {
-          inherit inputs username system;
-        };
       };
 
       devShells.${system} = {
