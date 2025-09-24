@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hjem.url = "github:feel-co/hjem";
     hjem-impure.url = "github:Rexcrazy804/hjem-impure";
-    spicetify-nix.url = "github:Greg-L/spicetify-nix";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
