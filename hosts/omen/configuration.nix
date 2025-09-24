@@ -1,4 +1,4 @@
-{ config, pkgs, username, ... }: {
+{ config, pkgs, ... }: {
   imports = [
       ./hardware-configuration.nix
     ];
@@ -24,13 +24,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     #jack.enable = true;
-  };
-
-  users.users.${username} = {
-    isNormalUser = true;
-    description = "Darsh yadav";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
   };
 
   environment.systemPackages = with pkgs; [

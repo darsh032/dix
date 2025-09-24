@@ -29,7 +29,6 @@
       ...
     }@inputs:
     let
-      username = "awesome";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
@@ -39,7 +38,7 @@
     {
 
       nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs username; };
+        specialArgs = { inherit inputs ; };
         modules = [
           { nixpkgs.config.allowUnfree = true; }
           ./nixos-modules/default.nix
