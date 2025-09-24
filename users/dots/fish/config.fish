@@ -25,6 +25,7 @@ status is-interactive; and begin
     alias nr 'sudo nixos-rebuild switch --flake'
     alias qsd 'nix develop ~/dix#quickshell'
     alias rsd 'nix develop ~/dix#rustlings'
+    alias hjem-pure 'systemd-tmpfiles --user --create'
 
     # Interactive shell initialisation
     if test "$TERM" != dumb
