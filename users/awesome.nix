@@ -7,8 +7,8 @@
     
     packages = with pkgs; [
       # Caelestia
-      input.caelestia-shell.packages.${system}.default
-      input.caelestia-cli.packages.${system}.default
+      inputs.caelestia-shell.packages.${system}.default
+      inputs.caelestia-cli.packages.${system}.default
       wl-clipboard
       cliphist
       libnotify
@@ -23,6 +23,8 @@
 
       # Hyprland stuff
       kitty
+      fuzzel
+      bibata-cursors
 
       # daily
       firefox
@@ -46,7 +48,7 @@
       ".config/starship.toml".source = ./dots/starship.toml;
 
       # Hyprland
-      ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf
+      ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;
     };
   };
 }
