@@ -38,7 +38,6 @@
     in
     {
 
-
       nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs username; };
         modules = [
@@ -46,6 +45,7 @@
           ./nixos-modules/default.nix
           ./system/default.nix
           ./hosts/omen/configuration.nix
+          ./users/awesome.nix
           inputs.hjem.nixosModules.default
         ];
       };
