@@ -12,6 +12,9 @@
       wl-clipboard
       cliphist
       libnotify
+
+      # idk
+      starship
       
       # Helix general LSPs
       nixd
