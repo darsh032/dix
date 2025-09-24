@@ -39,6 +39,7 @@
     
     users.awesome = {
       impure.enable = true;
+      clobberFiles = true;
       
       files = {
         # Firefox
