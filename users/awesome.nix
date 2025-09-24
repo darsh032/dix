@@ -4,6 +4,7 @@
     description = "Darsh yadav";
     shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" ];
+    
     packages = with pkgs; [
       # Helix general LSPs
       nixd
@@ -11,6 +12,8 @@
       simple-completion-language-server
     ];
   };
+
+  programs.fish.enable = true;
 
   hjem.users.awesome = {
     files = {

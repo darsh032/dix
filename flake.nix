@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    hyprland.url = "github:hyprwm/Hyprland";
     hjem.url = "github:feel-co/hjem";
 
     quickshell = {
@@ -41,7 +40,7 @@
         specialArgs = { inherit inputs ; };
         modules = [
           { nixpkgs.config.allowUnfree = true; }
-          ./nixos-modules/default.nix
+          # ./nixos-modules/default.nix
           ./system/default.nix
           ./hosts/omen/configuration.nix
           ./users/awesome.nix

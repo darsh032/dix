@@ -3,6 +3,8 @@
       ./hardware-configuration.nix
     ];
 
+  programs.hyprland.enable = true;
+    
   hardware.nvidia = {
   modesetting.enable = true;
   powerManagement.enable = true;
