@@ -69,7 +69,7 @@ in {
 
         # Git
         ".gitconfig".source = dots + ./dot_gitconfig;
-      }
+      };
       
       files = {
         # Firefox
