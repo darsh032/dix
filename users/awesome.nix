@@ -15,6 +15,7 @@
 
       # idk
       starship
+      nerd-fonts.jetbrains-mono
       
       # Helix general LSPs
       nixd
@@ -49,6 +50,9 @@
 
       # Hyprland
       ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;
+
+      # Kitty
+      ".config/kitty/kitty.conf".source = ./dots/kitty/kitty.conf;
     };
   };
 }
