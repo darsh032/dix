@@ -34,28 +34,34 @@
 
   programs.fish.enable = true;
 
-  hjem.users.awesome = {
-    files = {
-      # Firefox
-      ".mozilla/firefox/profiles.ini".source = ./dots/firefox/profiles.ini;
-      ".mozilla/firefox/default/user.js".source = ./dots/firefox/default/user.js;
-      ".mozilla/firefox/default/extensions".source = ./dots/firefox/default/extensions;
+  hjem = {
+    extraModules = [ inputs.hjem-impure.hjemModules.default ];
+    
+    users.awesome = {
+      impure.enable = true;
+      
+      files = {
+        # Firefox
+        ".mozilla/firefox/profiles.ini".source = ./dots/firefox/profiles.ini;
+        ".mozilla/firefox/default/user.js".source = ./dots/firefox/default/user.js;
+        ".mozilla/firefox/default/extensions".source = ./dots/firefox/default/extensions;
 
-      # Helix
-      ".config/helix".source = ./dots/helix;
+        # Helix
+        ".config/helix".source = ./dots/helix;
 
-      # Fish
-      ".config/fish".source = ./dots/fish;
-      ".config/starship.toml".source = ./dots/starship.toml;
+        # Fish
+        ".config/fish".source = ./dots/fish;
+        ".config/starship.toml".source = ./dots/starship.toml;
 
-      # Hyprland
-      ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;
+        # Hyprland
+        ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;
 
-      # Kitty
-      ".config/kitty/kitty.conf".source = ./dots/kitty/kitty.conf;
+        # Kitty
+        ".config/kitty/kitty.conf".source = ./dots/kitty/kitty.conf;
 
-      # Git
-      ".gitconfig".source = ./dots/dot_gitconfig;
+        # Git
+        ".gitconfig".source = ./dots/dot_gitconfig;
+      };
     };
-  };
+  }
 }

@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hjem.url = "github:feel-co/hjem";
+    hjem-impure.url = "github:Rexcrazy804/hjem-impure";
 
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
