@@ -42,7 +42,7 @@
         specialArgs = { inherit inputs ; };
         modules = [
           { nixpkgs.config.allowUnfree = true; }
-          # ./nixos-modules/default.nix
+          ./nixos-modules/default.nix
           ./system/default.nix
           ./hosts/omen/configuration.nix
           ./users/awesome.nix
