@@ -53,6 +53,9 @@
 
       # Kitty
       ".config/kitty/kitty.conf".source = ./dots/kitty/kitty.conf;
+
+      # Git
+      ".gitconfig".source = ./dots/dot_gitconfig;
     };
   };
 }
