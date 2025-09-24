@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
    users.users.awesome = {
     isNormalUser = true;
     description = "Darsh yadav";
@@ -6,10 +6,23 @@
     extraGroups = [ "networkmanager" "wheel" ];
     
     packages = with pkgs; [
+      # Caelestia
+      input.caelestia-shell.packages.${system}.default
+      input.caelestia-cli.packages.${system}.default
+      wl-clipboard
+      cliphist
+      libnotify
+      
       # Helix general LSPs
       nixd
       rust-analyzer
       simple-completion-language-server
+
+      # Hyprland stuff
+      kitty
+
+      # daily
+      firefox
     ];
   };
 
@@ -24,6 +37,13 @@
 
       # Helix
       ".config/helix".source = ./dots/helix;
+
+      # Fish
+      ".config/fish".source = ./dots/fish;
+      ".config/starship.toml".source = ./dots/starship.toml;
+
+      # Hyprland
+      ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf
     };
   };
 }

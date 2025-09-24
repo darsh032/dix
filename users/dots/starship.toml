@@ -1,0 +1,9 @@
+add_newline = true
+format = "[](bg:#transparent fg:#262626)[  ](bg:#262626 fg:blue)$directory[ ](fg:#262626 bg:#transparent)"
+right_format = "$git_status"
+
+[directory]
+format = "[$path]($style)"
+home_symbol = " "
+style = "bg:#262626 fg:white"
+truncation_length = 2
