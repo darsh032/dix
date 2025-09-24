@@ -111,6 +111,21 @@
         "type": "github"
       }
     },
+    "hjem-impure": {
+      "locked": {
+        "lastModified": 1758544059,
+        "narHash": "sha256-j+ff9fcIcwDu453uyoMhXqbc8UVN1Md9IJwiV6xf14g=",
+        "owner": "Rexcrazy804",
+        "repo": "hjem-impure",
+        "rev": "fc1ecda8104e2850b03e66715a59d3345bdc2597",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Rexcrazy804",
+        "repo": "hjem-impure",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1757487488,
@@ -211,6 +226,7 @@
         "caelestia-cli": "caelestia-cli",
         "caelestia-shell": "caelestia-shell_2",
         "hjem": "hjem",
+        "hjem-impure": "hjem-impure",
         "nixpkgs": "nixpkgs_2",
         "quickshell": "quickshell_3"
       }

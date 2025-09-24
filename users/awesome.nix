@@ -63,5 +63,5 @@
         ".gitconfig".source = ./dots/dot_gitconfig;
       };
     };
-  }
+  };
 }
