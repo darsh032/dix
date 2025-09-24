@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... }: {
+{ config, pkgs, inputs, ... }:
+
+let
+  userName = "awesome";
+in {
    users.users.awesome = {
     isNormalUser = true;
     description = "Darsh yadav";
@@ -37,31 +41,38 @@
   hjem = {
     extraModules = [ inputs.hjem-impure.hjemModules.default ];
     
-    users.awesome = {
-      impure.enable = true;
+    users.${userName} = {
+      impure = {
+        enable = true;
+        dotsDir = "${./dots}";
+        dotsDirImpure = "/home/${userName}/dix/users/dots";
+      };
+
       clobberFiles = true;
       
-      files = {
+      files = let
+        dots = config.hjem.users.${userName}.impure.dotsDir;    
+      in {
         # Firefox
         ".mozilla/firefox/profiles.ini".source = ./dots/firefox/profiles.ini;
         ".mozilla/firefox/default/user.js".source = ./dots/firefox/default/user.js;
         ".mozilla/firefox/default/extensions".source = ./dots/firefox/default/extensions;
 
         # Helix
-        ".config/helix".source = ./dots/helix;
+        ".config/helix".source = dots + ./dots/helix;
 
         # Fish
-        ".config/fish".source = ./dots/fish;
-        ".config/starship.toml".source = ./dots/starship.toml;
+        ".config/fish".source = dots + ./dots/fish;
+        ".config/starship.toml".source = dots + ./dots/starship.toml;
 
         # Hyprland
-        ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;
+        ".config/hypr/hyprland.conf".source = dots + ./dots/hypr/hyprland.conf;
 
         # Kitty
-        ".config/kitty/kitty.conf".source = ./dots/kitty/kitty.conf;
+        ".config/kitty/kitty.conf".source = dots + ./dots/kitty/kitty.conf;
 
         # Git
-        ".gitconfig".source = ./dots/dot_gitconfig;
+        ".gitconfig".source = dots + ./dots/dot_gitconfig;
       };
     };
   };
