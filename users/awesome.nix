@@ -55,20 +55,20 @@ in {
         dots = config.hjem.users.${userName}.impure.dotsDir;
       in {
         # Helix
-        ".config/helix".source = dots + /helix;
+        ".config/helix".source = dots + "/helix";
 
         # Fish
-        ".config/fish".source = dots + /fish;
-        ".config/starship.toml".source = dots + /starship.toml;
+        ".config/fish".source = dots + "/fish";
+        ".config/starship.toml".source = dots + "/starship.toml";
 
         # Hyprland
-        ".config/hypr/hyprland.conf".source = dots + /hypr/hyprland.conf;
+        ".config/hypr/hyprland.conf".source = dots + "/hypr/hyprland.conf";
 
         # Kitty
-        ".config/kitty/kitty.conf".source = dots + /kitty/kitty.conf;
+        ".config/kitty/kitty.conf".source = dots + "/kitty/kitty.conf";
 
         # Git
-        ".gitconfig".source = dots + /dot_gitconfig;
+        ".gitconfig".source = dots + "/dot_gitconfig";
       };
       
       files = {
