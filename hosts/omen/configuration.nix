@@ -3,7 +3,9 @@
       ./hardware-configuration.nix
     ];
 
-  programs.hyprland.enable = true;
+
+fonts.fontconfig.enable = true;
+programs.hyprland.enable = true;
     
   hardware.nvidia = {
   modesetting.enable = true;
