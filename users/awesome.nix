@@ -55,20 +55,17 @@ in {
         dots = config.hjem.users.${userName}.impure.dotsDir;
       in {
         # Helix
-        ".config/helix".source = dots + "/helix";
+        "helix".source = dots + "/helix";
 
         # Fish
-        ".config/fish".source = dots + "/fish";
-        ".config/starship.toml".source = dots + "/starship.toml";
+        "fish".source = dots + "/fish";
+        "starship.toml".source = dots + "/starship.toml";
 
         # Hyprland
-        ".config/hypr/hyprland.conf".source = dots + "/hypr/hyprland.conf";
+        "hypr/hyprland.conf".source = dots + "/hypr/hyprland.conf";
 
         # Kitty
-        ".config/kitty/kitty.conf".source = dots + "/kitty/kitty.conf";
-
-        # Git
-        ".gitconfig".source = dots + "/dot_gitconfig";
+        "kitty/kitty.conf".source = dots + "/kitty/kitty.conf";
       };
       
       files = {
@@ -76,6 +73,10 @@ in {
         ".mozilla/firefox/profiles.ini".source = ./dots/firefox/profiles.ini;
         ".mozilla/firefox/default/user.js".source = ./dots/firefox/default/user.js;
         ".mozilla/firefox/default/extensions".source = ./dots/firefox/default/extensions;
+
+
+        # Git
+        ".gitconfig".source = ./dots/dot_gitconfig;
       };
     };
   };
