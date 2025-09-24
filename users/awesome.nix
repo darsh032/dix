@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ dirName, config, pkgs, inputs, ... }:
 
 let
   userName = "awesome";
@@ -45,7 +45,7 @@ in {
       impure = {
         enable = true;
         dotsDir = "${./dots}";
-        dotsDirImpure = "/home/${userName}/dix/users/dots";
+        dotsDirImpure = "/home/${userName}/dirName/users/dots";
         parseAttrs = [config.hjem.users.${userName}.xdg.config.files];
       };
 

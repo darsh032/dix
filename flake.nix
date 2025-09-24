@@ -31,6 +31,7 @@
     }@inputs:
     let
       system = "x86_64-linux";
+      dirName = "dix";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
@@ -39,7 +40,7 @@
     {
 
       nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs ; };
+        specialArgs = { inherit inputs dirName; };
         modules = [
           { nixpkgs.config.allowUnfree = true; }
           ./nixos-modules/default.nix
