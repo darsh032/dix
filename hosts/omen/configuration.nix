@@ -4,6 +4,8 @@
     ];
 
 
+  moduleSpicetify.enable = true;
+    
 fonts.fontconfig.enable = true;
 programs.hyprland.enable = true;
     
