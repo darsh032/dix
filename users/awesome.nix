@@ -62,7 +62,7 @@ in {
         "starship.toml".source = dots + "/starship.toml";
 
         # Hyprland
-        "hypr/hyprland.conf".source = dots + "/hyprland/hyprland.conf";
+        "hypr/hyprland.conf".source = dots + "/hypr/hyprland.conf";
 
         # Kitty
         "kitty/kitty.conf".source = dots + "/kitty/kitty.conf";
