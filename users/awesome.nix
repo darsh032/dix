@@ -66,6 +66,9 @@ in {
 
         # Kitty
         "kitty/kitty.conf".source = dots + "/kitty/kitty.conf";
+
+        # Quickshell
+        "quickshell/mane".source = dots + "/quickshell";
       };
       
       files = {
