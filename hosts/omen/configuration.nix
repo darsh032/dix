@@ -5,6 +5,7 @@
 
 
   moduleSpicetify.enable = true;
+  moduleQt.enable = true;
     
 fonts.fontconfig.enable = true;
 programs.hyprland.enable = true;
