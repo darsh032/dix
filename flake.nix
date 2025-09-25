@@ -57,7 +57,6 @@
           buildInputs = with pkgs; [
             cargo
             rustlings
-            rust-analyzer
           ];
         };
 
