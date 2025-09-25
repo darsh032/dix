@@ -62,7 +62,7 @@ in {
         "starship.toml".source = dots + "/starship.toml";
 
         # Hyprland
-        "hypr/hyprland.conf".source = dots + "/hypr/hyprland.conf";
+        "hypr/hyprland.conf".source = dots + "/hyprland/hyprland.conf";
 
         # Kitty
         "kitty/kitty.conf".source = dots + "/kitty/kitty.conf";
@@ -73,7 +73,6 @@ in {
         ".mozilla/firefox/profiles.ini".source = ./dots/firefox/profiles.ini;
         ".mozilla/firefox/default/user.js".source = ./dots/firefox/default/user.js;
         ".mozilla/firefox/default/extensions".source = ./dots/firefox/default/extensions;
-
 
         # Git
         ".gitconfig".source = ./dots/dot_gitconfig;
