@@ -45,7 +45,7 @@ in {
       impure = {
         enable = true;
         dotsDir = "${./dots}";
-        dotsDirImpure = "/home/${userName}${dirName}/users/dots";
+        dotsDirImpure = "/home/${userName}/${dirName}/users/dots";
         parseAttrs = [config.hjem.users.${userName}.xdg.config.files];
       };
 
