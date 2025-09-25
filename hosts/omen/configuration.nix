@@ -1,8 +1,14 @@
-{ config, pkgs, username, ... }: {
+{ config, pkgs, ... }: {
   imports = [
       ./hardware-configuration.nix
     ];
 
+
+  moduleSpicetify.enable = true;
+    
+fonts.fontconfig.enable = true;
+programs.hyprland.enable = true;
+    
   hardware.nvidia = {
   modesetting.enable = true;
   powerManagement.enable = true;
@@ -26,16 +32,8 @@
     #jack.enable = true;
   };
 
-  users.users.${username} = {
-    isNormalUser = true;
-    description = "Darsh yadav";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
-
   environment.systemPackages = with pkgs; [
      helix
-     home-manager
      git
   ];
 

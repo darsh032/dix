@@ -1,0 +1,26 @@
+theme = "gruvbox"
+
+[editor]
+bufferline = "multiple"
+color-modes = true
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.lsp]
+display-messages = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+right = ["file-type", "position"]
+
+[editor.statusline.mode]
+insert = "INSERT"
+normal = "NORMAL"
+select = "SELECT"
+
