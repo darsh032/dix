@@ -1,11 +1,3 @@
-# ~/.config/fish/config.fish: DO NOT EDIT -- this file has been generated
-# automatically by home-manager.
-
-# Only execute this file once per shell.
-set -q __fish_home_manager_config_sourced; and exit
-set -g __fish_home_manager_config_sourced 1
-source /nix/store/5q1qhjh6f3s4vxjafjnll91dj48c03hb-hm-session-vars.fish
-
 cat ~/.local/state/caelestia/sequences.txt 2>/dev/null
 
 set fish_greeting
@@ -21,7 +13,6 @@ status is-interactive; and begin
     # Abbreviations
 
     # Aliases
-    alias hr 'home-manager switch --flake'
     alias nr 'sudo nixos-rebuild switch --flake'
     alias qsd 'nix develop ~/dix#quickshell'
     alias rsd 'nix develop ~/dix#rustlings'
