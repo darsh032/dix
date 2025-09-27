@@ -18,6 +18,7 @@ in {
       libnotify
 
       # idk
+      eza
       zoxide
       starship
       nerd-fonts.jetbrains-mono
