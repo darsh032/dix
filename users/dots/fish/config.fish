@@ -10,6 +10,9 @@ end
 
 status is-interactive; and begin
 
+    # Zoxide
+    zoxide init fish | source
+
     # Abbreviations
 
     # Aliases
