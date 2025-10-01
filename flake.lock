@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1759024802,
-        "narHash": "sha256-lZf7+RyB1429AAze8Gdq+61H01ZWyDfKgJtvAX7MPLs=",
+        "lastModified": 1759196872,
+        "narHash": "sha256-rtL5WWfrhuCHOUCBj+JxU6DCQOCoFE9W3QazHRqg5/w=",
         "owner": "caelestia-dots",
         "repo": "cli",
-        "rev": "af79030bf557b1d40bed6882fa6dac76dfee4f57",
+        "rev": "069d3a95da04ccc3688c25ee32612cd0757b66c9",
         "type": "github"
       },
       "original": {
@@ -112,17 +112,45 @@
       }
     },
     "hjem-impure": {
+      "inputs": {
+        "hjem": "hjem_2",
+        "nixpkgs": "nixpkgs_2"
+      },
       "locked": {
-        "lastModified": 1758544059,
-        "narHash": "sha256-j+ff9fcIcwDu453uyoMhXqbc8UVN1Md9IJwiV6xf14g=",
+        "lastModified": 1759133558,
+        "narHash": "sha256-L1lgqtxswZP153zLUdMmpuXVi14ldZG5iWqq/GDKp9k=",
         "owner": "Rexcrazy804",
         "repo": "hjem-impure",
-        "rev": "fc1ecda8104e2850b03e66715a59d3345bdc2597",
+        "rev": "ca46a27cf1f831688c60f452f96755d69ff2f095",
         "type": "github"
       },
       "original": {
         "owner": "Rexcrazy804",
         "repo": "hjem-impure",
+        "type": "github"
+      }
+    },
+    "hjem_2": {
+      "inputs": {
+        "nixpkgs": [
+          "hjem-impure",
+          "nixpkgs"
+        ],
+        "smfh": [
+          "hjem-impure"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757733237,
+        "narHash": "sha256-q57LxLzOQuW0ROtoBMMPbG8neBYa6LizRH9FVOQkkLQ=",
+        "owner": "feel-co",
+        "repo": "hjem",
+        "rev": "627b34efad55fd42d6dd52c19c796604d2b8e8bd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "feel-co",
+        "repo": "hjem",
         "type": "github"
       }
     },
@@ -159,6 +187,22 @@
       }
     },
     "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1759036355,
+        "narHash": "sha256-0m27AKv6ka+q270dw48KflE0LwQYrO7Fm4/2//KCVWg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "e9f00bd893984bc8ce46c895c3bf7cac95331127",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1758690382,
         "narHash": "sha256-NY3kSorgqE5LMm1LqNwGne3ZLMF2/ILgLpFr1fS4X3o=",
@@ -224,11 +268,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1759110945,
-        "narHash": "sha256-5GDNIqOX7zNfC8I4vfrtawRf0YxvUXFfPxxeer5XVDY=",
+        "lastModified": 1759208386,
+        "narHash": "sha256-IQCtGpy+Z1GupmTeJKSb/bXf097jL5fnsGnP8PArkPo=",
         "ref": "refs/heads/master",
-        "rev": "2119eb2205d7bb3de3fec814135eda2073328f50",
-        "revCount": 676,
+        "rev": "482744cfa95cdb76a6175d08f29f35005b8e0887",
+        "revCount": 684,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
@@ -243,7 +287,7 @@
         "caelestia-shell": "caelestia-shell_2",
         "hjem": "hjem",
         "hjem-impure": "hjem-impure",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "quickshell": "quickshell_3",
         "spicetify-nix": "spicetify-nix"
       }
@@ -295,7 +339,7 @@
     },
     "spicetify-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_4",
         "systems": "systems_2"
       },
       "locked": {
