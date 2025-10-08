@@ -20,6 +20,8 @@ in {
       # idk
       eza
       zoxide
+      bat
+      glow
       starship
       nerd-fonts.jetbrains-mono
       
