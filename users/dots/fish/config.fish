@@ -10,6 +10,8 @@ end
 
 status is-interactive; and begin
 
+    set EDITOR hx
+
     # Zoxide
     zoxide init fish | source
 
