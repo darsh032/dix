@@ -26,6 +26,7 @@ in {
       # Helix general LSPs
       nixd
       rust-analyzer
+      marksman
       simple-completion-language-server
 
       # Hyprland stuff

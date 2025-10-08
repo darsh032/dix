@@ -4,6 +4,11 @@ language-servers = ["scls", "nixd"]
 name = "nix"
 indent = { tab-width = 2, unit = "  " }
 
+[[language]]
+auto-format = false
+language-servers = ["scls", "marksman"]
+name = "markdown"
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 auto-format = false
