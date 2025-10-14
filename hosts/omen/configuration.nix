@@ -4,7 +4,7 @@
     ];
 
 
-  moduleSpicetify.enable = true;
+  moduleSpicetify.enable = false;
   moduleQt.enable = true;
     
 fonts.fontconfig.enable = true;
