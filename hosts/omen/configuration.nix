@@ -11,14 +11,14 @@
   programs.hyprland.enable = true;
     
   # Enable proprietary NVIDIA driver
+  services.flatpak.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
 
   # Optional: enable NVIDIA persistence and settings
   hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.optimus_prime.enable = true; # if you have Intel+NVIDIA (Optimus)
 
-  # Optional: enable NVIDIA DRM for Wayland
-  hardware.nvidia.drm.enable = true;
+  hardware.nvidia.open = true;
+
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
