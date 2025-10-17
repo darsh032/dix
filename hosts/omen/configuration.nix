@@ -17,9 +17,6 @@
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.optimus_prime.enable = true; # if you have Intel+NVIDIA (Optimus)
 
-  # Optional: enable CUDA if you need it
-  hardware.nvidia.cuda.enable = true;
-
   # Optional: enable NVIDIA DRM for Wayland
   hardware.nvidia.drm.enable = true;
   services.displayManager.gdm.enable = true;
