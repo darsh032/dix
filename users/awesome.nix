@@ -76,11 +76,13 @@ in {
         "quickshell/mane".source = dots + "/quickshell";
       };
       
-      files = {
+      files = let
+        dots = config.hjem.users.${userName}.impure.dotsDir;
+      in {
         # Firefox
-        ".mozilla/firefox/profiles.ini".source = ./dots/firefox/profiles.ini;
-        ".mozilla/firefox/default/user.js".source = ./dots/firefox/default/user.js;
-        ".mozilla/firefox/default/extensions".source = ./dots/firefox/default/extensions;
+        ".mozilla/firefox/profiles.ini".source = dots + ./dots/firefox/profiles.ini;
+        ".mozilla/firefox/default/user.js".source = dots + ./dots/firefox/default/user.js;
+        ".mozilla/firefox/default/extensions".source = dots + ./dots/firefox/default/extensions;
 
         # Git
         ".gitconfig".source = ./dots/dot_gitconfig;
