@@ -20,12 +20,11 @@
         ncsVisualizer
       ];
       enabledSnippets = with spicePkgs.snippets; [
-        rotatingCoverart
         pointer
       ];
 
       theme = spicePkgs.themes.catppuccin;
-      colorScheme = "mocha";
+      # colorScheme = "mocha";
     }; 
   };
 }
