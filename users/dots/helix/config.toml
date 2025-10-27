@@ -1,8 +1,8 @@
-theme = "tokyonight_moon"
+theme = "adwaita-dark"
 
 [editor]
 bufferline = "multiple"
-color-modes = true
+# color-modes = true
 line-number = "relative"
 
 [editor.cursor-shape]
