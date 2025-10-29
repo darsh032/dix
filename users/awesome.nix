@@ -38,6 +38,10 @@ in {
 
       # daily
       firefox
+
+      # Youtube.
+      davinci-resolve
+      audacity
     ];
   };
 
