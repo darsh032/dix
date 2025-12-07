@@ -30,7 +30,7 @@ in{
         ];
 
         general = {
-          gaps_in = 2;
+          gaps_in = 5;
           gaps_out = 10;
           border_size = 2;
           "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
@@ -48,8 +48,8 @@ in{
 
           shadow = {
             enabled = true;
-            range = 4;
-            render_power = 3;
+            range = 8;
+            render_power = 8;
             color = "rgba(1a1a1aee)";
           };
 
@@ -108,8 +108,8 @@ in{
         };
 
         misc = {
-          force_default_wallpaper = -1 ;
-          disable_hyprland_logo = false ;
+          force_default_wallpaper = false;
+          disable_hyprland_logo = true;
         };
 
         input = lib.mkMerge [
