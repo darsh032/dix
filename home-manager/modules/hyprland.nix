@@ -30,8 +30,8 @@ in{
         ];
 
         general = {
-          gaps_in = 5;
-          gaps_out = 20;
+          gaps_in = 2;
+          gaps_out = 10;
           border_size = 2;
           "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
           "col.inactive_border" = "rgba(595959aa)";
@@ -41,7 +41,7 @@ in{
         };
 
         decoration = {
-          rounding = 10;
+          rounding = 20;
           rounding_power = 2;
           active_opacity = 1.0;
           inactive_opacity = 1.0;
