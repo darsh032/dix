@@ -13,6 +13,7 @@
       extensions = [
         { id = "mmioliijnhnoblpgimnlajmefafdfilb"; }
         { id = "ghmbeldphafepmbegfdlkpapadhbakde"; }
+        { id = "jpkfgepcmmchgfbjblnodjhldacghenp"; }
       ];
     };
   };	
