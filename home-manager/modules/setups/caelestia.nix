@@ -28,6 +28,7 @@
 
         bind = [
           "Super Ctrl, R, exec, caelestia-shell kill;caelestia shell"
+          "Super Ctrl, S, exec, caelestia shell drawers toggle sidebar"
           "Super Alt, C, global, caelestia:clearNotifs"
           "Super, Super_L, exec, caelestia shell drawers toggle launcher"
           "Super, L, global, caelestia:lock"
