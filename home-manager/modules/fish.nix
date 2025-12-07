@@ -23,6 +23,7 @@
         "rsd" = "nix develop ~/dix#rustlings";
         "qsd" = "nix develop ~/dix#quickshell";
         "z" = "zoxide";
+        "ls" = "eza --icons";
       };
     };
   };

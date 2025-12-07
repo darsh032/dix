@@ -14,10 +14,11 @@
         add_newline = true;
 
         format = lib.concatStrings [
-          "[](bg:#transparent fg:#262626)"
-          "[  ](bg:#262626 fg:blue)" 
+          # "[](bg:#transparent fg:#262626)"
+          "[  ](bg:transparent fg:blue)" 
           "$directory"
-          "[ ](fg:#262626 bg:#transparent)"
+          # "[ ](fg:#262626 bg:#transparent)"
+          "[ ](fg:#transparent bg:#transparent)"
         ];
 
         right_format = lib.concatStrings [
@@ -27,7 +28,7 @@
         directory = {
           format = "[$path]($style)";
           truncation_length = 2;
-          style = "bg:#262626 fg:white";
+          style = "bg:transparent fg:blue";
           home_symbol = " ";
         };
       };
