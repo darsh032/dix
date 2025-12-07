@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+{ config, lib, ... }:
 
 let
   input_options = "caps:escape";
@@ -16,6 +16,7 @@ in{
   config = lib.mkIf config.moduleHyprland.enable {
     wayland.windowManager.hyprland = {
       enable = true;
+           
       settings = {
         monitor = ",preferred,auto,auto";
 
@@ -139,12 +140,11 @@ in{
 
         bind = [
           "Super, F, fullscreen"
-          "Super, Q, exec, $terminal"
-          "Super, C, killactive,"
+          "Super, T, exec, $terminal"
+          "Super, Q, killactive,"
           "Super, M, exit,"
           "Super, E, exec, $fileManager"
           "Super, Space, togglefloating,"
-          "Super, R, exec, $menu"
           "Super, P, pseudo, "
           "Super, J, togglesplit, "
           "Super, left, movefocus, l"
@@ -173,8 +173,8 @@ in{
           "Super SHIFT, 0, movetoworkspace, 10"
           "Super, S, togglespecialworkspace, special"
           "Super Alt, S, movetoworkspace, special"
-          "Super, mouse_down, workspace, e+1"
-          "Super, mouse_up, workspace, e-1"
+          "Super, mouse_down, workspace, +1"
+          "Super, mouse_up, workspace, -1"
         ];
 
         bindm = [

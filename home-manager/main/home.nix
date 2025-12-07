@@ -6,7 +6,7 @@
   moduleCaelestia.enable = true;
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "hx";
   };
 
   home.sessionPath = [

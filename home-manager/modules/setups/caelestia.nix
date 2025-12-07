@@ -19,7 +19,7 @@
     wayland.windowManager.hyprland = {
       settings = {        
         source = "~/.config/hypr/scheme/current.conf";
-        
+
         exec-once = [
           "caelestia shell" 
           "wl-paste --type text --watch cliphist store" 
@@ -29,12 +29,12 @@
         bind = [
           "Super Ctrl, R, exec, caelestia-shell kill;caelestia shell"
           "Super Alt, C, global, caelestia:clearNotifs"
+          "Super, Super_L, exec, caelestia shell drawers toggle launcher"
           "Super, L, global, caelestia:lock"
           "Super Shift, S, exec,  caelestia screenshot -r -f"
           "Super, V, exec, pkill fuzzel || caelestia clipboard"
           "Super Alt, V, exec, pkill fuzzel || caelestia clipboard -d"
-          "Super, ., exec, pkill fuzzel || caelestia emoji -p"
-          "Super, D, global, caelestia:launcher"
+          "Super, Period, exec, pkill fuzzel || caelestia emoji -p"
         ];
 
         general = lib.mkForce {

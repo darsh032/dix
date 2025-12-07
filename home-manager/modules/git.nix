@@ -7,9 +7,13 @@
 
     config = lib.mkIf config.moduleGit.enable {
     	programs.git = {
-	    enable = true;
-            userName = "Darsh yadav";
-            userEmail = "darsh.yadav@proton.me";
+  	    enable = true;
+  	      settings = {
+            user = {
+              name = "Darsh yadav";
+              email = "darsh.yadav@proton.me";
+            };
+  	      };
         };
     };
 }
