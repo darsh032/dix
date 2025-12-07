@@ -1,14 +1,14 @@
 { lib, config, pkgs, ... }: {
   options = {
-    moduleBrave.enable = lib.mkEnableOption "Enables brave" // {
+    moduleChromium.enable = lib.mkEnableOption "Enables Chromium" // {
       default = true;
     };
 
   };
-  config = lib.mkIf config.moduleBrave.enable {
+  config = lib.mkIf config.moduleChromium.enable {
     programs.chromium = {
       enable = true;
-      package = pkgs.brave;
+      package = pkgs.chromium;
 
       extensions = [
         { id = "mmioliijnhnoblpgimnlajmefafdfilb"; }
