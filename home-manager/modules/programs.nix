@@ -8,6 +8,7 @@
   config = lib.mkIf config.moduleCommandPrograms.enable {
     home.packages = with pkgs; [
       vesktop
+      zoxide
     ];
   };
 }

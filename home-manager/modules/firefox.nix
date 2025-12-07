@@ -1,9 +1,8 @@
 { lib, config, inputs, system, ... }: {
   options = {
     moduleFirefox.enable = lib.mkEnableOption "Enables firefox" // {
-      default = true;
+      default = false;
     };
-
   };
   config = lib.mkIf config.moduleFirefox.enable {
     programs.firefox = {

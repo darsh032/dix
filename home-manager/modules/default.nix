@@ -2,6 +2,7 @@
   imports = [
     ./setups/caelestia.nix
     ./setups/asztal.nix
+    ./brave.nix
     ./firefox.nix
     ./git.nix
     ./programs.nix
