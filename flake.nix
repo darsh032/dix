@@ -97,6 +97,10 @@
             rustlings
             rust-analyzer
           ];
+
+          shellHook = ''
+            fish
+          '';
         };
 
         quickshell = pkgs.mkShell {
@@ -104,6 +108,10 @@
             inputs.quickshell.packages.${system}.default
             kdePackages.qtdeclarative
           ];
+
+          shellHook = ''
+            fish
+          '';
         };
 
         python = pkgs.mkShell {
@@ -111,6 +119,10 @@
             self.packages.${system}.hx-python
             python3
           ];
+
+          shellHook = ''
+            fish
+          '';
         };
       };
     };
