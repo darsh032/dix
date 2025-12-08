@@ -44,6 +44,7 @@
     let
       username = "awesome";
       system = "x86_64-linux";
+
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
@@ -85,7 +86,7 @@
           inputs.spicetify-nix.homeManagerModules.default
         ];
         extraSpecialArgs = {
-          inherit inputs username;
+          inherit inputs username self;
         };
       };
 
