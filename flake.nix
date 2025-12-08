@@ -123,6 +123,7 @@
           buildInputs = with pkgs; [
             self.packages.${system}.hx-python
             python3
+            manim
           ];
 
           shellHook = ''
