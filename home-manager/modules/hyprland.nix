@@ -140,6 +140,7 @@ in{
 
         bind = [
           "Super, F, fullscreen"
+          "Super+Alt, F, fullscreenstate, 0 3"
           "Super, T, exec, $terminal"
           "Super, Q, killactive,"
           "Super, M, exit,"
