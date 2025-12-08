@@ -16,6 +16,7 @@ in
         auto-format = true;
         indent = { tab-width = 4; unit = "    "; };
         language-servers = [ "scls" "ruff" ];
+        formatter = { command = "ruff"; args = ["format"]; };
       }
     ];
 
