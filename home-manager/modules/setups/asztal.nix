@@ -1,11 +1,11 @@
 { config, lib, inputs, pkgs, ... }: {
   options = {
-    moduleAsztal.enable = lib.mkEnableOption "enables caelestia";
+    moduleAsztal.enable = lib.mkEnableOption "enables aszstal";
   };
 
   config = lib.mkIf config.moduleAsztal.enable {
     home.packages = with pkgs; [
-      inputs.asztal.packages.${system}.default
+      inputs.asztal.packages.${pkgs.stdenv.hostPlatform.system}.default
       libnotify
       swaylock
     ];
