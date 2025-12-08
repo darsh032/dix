@@ -41,24 +41,39 @@ in{
         };
 
         decoration = {
-          rounding = 20;
-          rounding_power = 2;
-          active_opacity = 1.0;
-          inactive_opacity = 1.0;
+            rounding = 18;
 
-          shadow = {
-            enabled = true;
-            range = 9;
-            render_power = 10;
-            color = "rgba(1a1a1aee)";
-          };
+            blur = {
+                enabled = true;
+                xray = true;
+                special = false;
+                new_optimizations = true;
+                size = 10;
+                passes = 3;
+                brightness = 1;
+                noise = 0.15;
+                contrast = 0.2;
+                vibrancy = 0.8;
+                vibrancy_darkness = 0.8;
+                popups = false;
+                popups_ignorealpha = 0.6;
+                input_methods = true;
+                input_methods_ignorealpha = 0.8;
+            };
 
-          blur = {
-            enabled = true;
-            size = 10;
-            passes = 5;
-            vibrancy = 0.1696;
-          };
+            shadow = {
+                enabled = true;
+                ignore_window = true;
+                range = 30;
+                offset = "0 2";
+                render_power = 4;
+                color = "rgba(00000010)";
+            };
+
+            # Dim
+            dim_inactive = true;
+            dim_strength = 0.025;
+            dim_special = 0.07;
         };
 
         animations = {
