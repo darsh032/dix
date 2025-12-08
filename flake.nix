@@ -58,9 +58,12 @@
       };
     in
     {
-
-      packages.${system}.hx-regular = helix-regular;
-      packages.${system}.hx-python = helix-python;
+      packages = {
+        ${system} = {
+          hx-regular = helix-regular;
+          hx-python = helix-python;
+        };
+      };
       
       nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs username; };
@@ -104,8 +107,8 @@
 
         python = pkgs.mkShell {
           buildInputs = with pkgs; [
+            self.packages.${system}.hx-python
             python3
-            ruff
           ];
         };
       };
