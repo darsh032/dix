@@ -22,6 +22,7 @@
         "nr" = "sudo nixos-rebuild switch --flake";
         "rsd" = "nix develop ~/dix#rustlings";
         "qsd" = "nix develop ~/dix#quickshell";
+        "psd" = "nix develop ~/dix#python";
         "z" = "zoxide";
         "ls" = "eza --icons";
       };

@@ -103,6 +103,13 @@
             kdePackages.qtdeclarative
           ];
         };
+
+        python = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            python3
+            ruff
+          ];
+        };
       };
     };
 }
