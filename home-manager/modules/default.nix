@@ -1,7 +1,6 @@
 { ... }: {
   imports = [
     ./setups/caelestia.nix
-    ./setups/asztal.nix
     ./chromium.nix
     ./firefox.nix
     ./git.nix

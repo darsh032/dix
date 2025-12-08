@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
-    asztal.url = "github:aylur/dotfiles/pre-astal";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     quickshell = {
@@ -68,18 +67,6 @@
         inherit pkgs;
         modules = [
           ./home-manager/main/home.nix
-          ./home-manager/modules/default.nix
-          inputs.spicetify-nix.homeManagerModules.default
-        ];
-        extraSpecialArgs = {
-          inherit inputs username;
-        };
-      };
-
-      homeConfigurations.asztal = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home-manager/asztal/home.nix
           ./home-manager/modules/default.nix
           inputs.spicetify-nix.homeManagerModules.default
         ];
