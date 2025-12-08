@@ -11,7 +11,7 @@
       enableFishIntegration = true;
 
       settings = {
-        add_newline = true;
+        add_newline = false;
 
         format = lib.concatStrings [
           # "[](bg:#transparent fg:#262626)"
