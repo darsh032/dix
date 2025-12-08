@@ -16,7 +16,7 @@ in
         auto-format = true;
         indent = { tab-width = 4; unit = "    "; };
         language-servers = [ "scls" "ruff" ];
-        formatter = { command = "ruff"; args = ["format"]; };
+        formatter = { command = "yapf"; };
       }
     ];
 
@@ -46,6 +46,7 @@ in
   extraPackages = with pkgs; [
     simple-completion-language-server
     ruff
+    yapf
   ];
 
   themes = { };
