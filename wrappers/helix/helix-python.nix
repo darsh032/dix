@@ -12,17 +12,10 @@ in
   languages = {
     language = [
       {
-        name = "nix";
-        auto-format = false;
-        indent = { tab-width = 2; unit = "  "; };
-        language-servers = [ "scls" "nixd" ];
-      }
-
-      {
-        name = "qml";
-        auto-format = false;
-        indent = { tab-width = 2; unit = "  "; };
-        language-servers = [ "qmlls" "scls" ];
+        name = "python";
+        auto-format = true;
+        indent = { tab-width = 4; unit = "    "; };
+        language-servers = [ "scls" "ruff" ];
       }
     ];
 
@@ -50,9 +43,8 @@ in
   };
 
   extraPackages = with pkgs; [
-    nixd
-    kdePackages.qtdeclarative
     simple-completion-language-server
+    ruff
   ];
 
   themes = { };

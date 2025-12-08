@@ -52,10 +52,15 @@
       helix-regular = import ./wrappers/helix/helix-regular.nix {
         inherit pkgs wrappers;
       };
+
+      helix-python = import ./wrappers/helix/helix-python.nix {
+        inherit pkgs wrappers;
+      };
     in
     {
 
-      packages.${system}.helix = helix-regular;
+      packages.${system}.hx-regular = helix-regular;
+      packages.${system}.hx-python = helix-python;
       
       nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs username; };
