@@ -98,6 +98,7 @@
       devShells.${system} = {
         rustlings = pkgs.mkShell {
           buildInputs = with pkgs; [
+            self.packages.${system}.hx-rust
             cargo
             rustlings
           ];
