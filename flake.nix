@@ -57,12 +57,17 @@
       helix-python = import ./wrappers/helix/helix-python.nix {
         inherit pkgs wrappers;
       };
+
+      helix-rust = import ./wrappers/helix/helix-rust.nix {
+        inherit pkgs wrappers;
+      };
     in
     {
       packages = {
         ${system} = {
           hx-regular = helix-regular;
           hx-python = helix-python;
+          hx-rust = helix-rust;
         };
       };
       
@@ -95,7 +100,6 @@
           buildInputs = with pkgs; [
             cargo
             rustlings
-            rust-analyzer
           ];
 
           shellHook = ''
