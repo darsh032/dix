@@ -16,7 +16,7 @@ in
         auto-format = true;
         indent = { tab-width = 4; unit = "    "; };
         language-servers = [ "scls" "ruff" ];
-        formatter = { command = "black"; args = ["-c %{buffer_name}"]; };
+        formatter = { command = "black -c"; };
       }
     ];
 
