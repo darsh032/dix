@@ -72,7 +72,7 @@
           inputs.spicetify-nix.homeManagerModules.default
         ];
         extraSpecialArgs = {
-          inherit inputs username system;
+          inherit inputs username;
         };
       };
 
@@ -84,7 +84,7 @@
           inputs.spicetify-nix.homeManagerModules.default
         ];
         extraSpecialArgs = {
-          inherit inputs username system;
+          inherit inputs username;
         };
       };
 
