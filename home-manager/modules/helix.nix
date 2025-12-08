@@ -59,7 +59,7 @@
       # };
 
       settings = {
-        theme = "gruvbox";
+        theme = "catppuccin_mocha";
         
         editor = {
           soft-wrap = {

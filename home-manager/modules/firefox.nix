@@ -1,4 +1,4 @@
-{ lib, config, inputs, system, ... }: {
+{ lib, config, inputs, pkgs, ... }: {
   options = {
     moduleFirefox.enable = lib.mkEnableOption "Enables firefox" // {
       default = false;
@@ -18,7 +18,7 @@
         };
 
         extensions = {
-          packages = with inputs.firefox-addons.packages.${system}; [
+          packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
             ublock-origin-upstream
             proton-pass
             proton-vpn

@@ -9,8 +9,8 @@
     
   config = lib.mkIf config.moduleCaelestia.enable {
     home.packages = with pkgs; [
-      inputs.caelestia-shell.packages.${system}.default
-      inputs.caelestia-cli.packages.${system}.default
+      inputs.caelestia-shell.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.caelestia-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
       libnotify
       wl-clipboard
       cliphist

@@ -89,7 +89,7 @@
       };
 
       devShells.${system} = {
-        default = pkgs.mkShell {
+        rustlings = pkgs.mkShell {
           buildInputs = with pkgs; [
             cargo
             rustlings
