@@ -38,16 +38,16 @@
           "Super, Period, exec, pkill fuzzel || caelestia emoji -p"
         ];
 
-        general = lib.mkForce {
-          gaps_in = 2;
-          gaps_out = 10;
-          border_size = 0;
-          "col.active_border" = "rgba($primarye6)";
-          "col.inactive_border" = "rgba($onSurfaceVariant11)";
-          resize_on_border = false;
-          allow_tearing = false;
-          layout = "dwindle";
-        };
+        # general = lib.mkForce {
+        #   gaps_in = 2;
+        #   gaps_out = 10;
+        #   border_size = 2;
+        #   "col.active_border" = "rgba($primarye6)";
+        #   "col.inactive_border" = "rgba($onSurfaceVariant11)";
+        #   resize_on_border = false;
+        #   allow_tearing = false;
+        #   layout = "dwindle";
+        # };
 
         layerrule = [
           "blur, caelestia-drawers"

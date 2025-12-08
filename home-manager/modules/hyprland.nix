@@ -30,14 +30,25 @@ in{
         ];
 
         general = {
-          gaps_in = 10;
-          gaps_out = 8;
-          border_size = 2;
-          "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-          "col.inactive_border" = "rgba(595959aa)";
-          resize_on_border = false;
-          allow_tearing = false;
-          layout = "dwindle";
+          gaps_in = 4;
+          gaps_out = 5;
+          gaps_workspaces = 50;
+
+          border_size = 1;
+          "col.active_border" = "rgba(0DB7D4FF)";
+          "col.inactive_border" = "rgba(31313600)";
+          resize_on_border = true;
+
+          no_focus_fallback = true;
+
+          allow_tearing = true;
+
+          snap = {
+          	enabled = true;
+          	window_gap = 4;
+          	monitor_gap = 5;
+          	respect_gaps = true;
+          };
         };
 
         decoration = {
