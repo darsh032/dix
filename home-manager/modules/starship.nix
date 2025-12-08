@@ -18,7 +18,8 @@
           "[  ](bg:transparent fg:blue)" 
           "$directory"
           # "[ ](fg:#262626 bg:#transparent)"
-          "[ ](fg:#transparent bg:#transparent)"
+          "[ ](fg:transparent bg:transparent)"
+          "[👉️](fg:transparent bg=transparent)"
         ];
 
         right_format = lib.concatStrings [
