@@ -1,18 +1,24 @@
-{ inputs, ... }: 
-let
-  username = "awesome";
-in {
-  flake = {
-    nixosConfigurations.omen = inputs.nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs username; };
-      modules = [
-        {
-          nixpkgs.config.allowUnfree = true;
-        }
-        ./nixos-modules/default.nix
-        ./system/default.nix
-        ./hosts/omen/configuration.nix
-      ];
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+flake = {
+    homeConfigurations = {
+      awesome = inputs.home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home-manager/main/home.nix
+          ./home-manager/modules/default.nix
+          inputs.spicetify-nix.homeManagerModules.default
+        ];
+        extraSpecialArgs = let
+          username = "awesome";
+          system = "x86_64-linux";
+        in {
+          inherit inputs username system;
+        };
+      };
     };
   };
 }

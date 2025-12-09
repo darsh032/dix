@@ -8,11 +8,6 @@
     wrappers.url = "github:lassulus/wrappers";
     flake-parts.url = "github:hercules-ci/flake-parts";
 
-    end4 = {
-      url = "github:darsh032/dots-hyprland-fork-for-some-reason";
-      flake = false;
-    };
-
     quickshell = {
       url = "github:quickshell-mirror/quickshell/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -43,11 +38,13 @@
     {
       nixpkgs,
       wrappers,
+      home-manager,
       flake-parts,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
+      username = "awesome";
 
       pkgs = import nixpkgs {
         inherit system;
@@ -69,54 +66,13 @@
 
     flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
+        inputs.home-manager.flakeModules.home-manager
         ./nixos.nix
-        ./home-manager.nix
+        ./wrappers/helix/helix.nix
       ];
 
       systems = [ "x86_64-linux" ];
-      perSystem = { inputs, self', ... }: {
-        packages = {
-          hx-regular = helix-regular;
-          hx-python = helix-python;
-          hx-rust = helix-rust;
-        };
 
-        devShells = {
-          rustlings = pkgs.mkShell {
-            buildInputs = with pkgs; [
-              self'.packages.hx-rust
-              cargo
-              rustlings
-            ];
-
-            shellHook = ''
-              fish
-            '';
-          };
-
-          quickshell = pkgs.mkShell {
-            buildInputs = with pkgs; [
-              inputs.quickshell.packages.${system}.default
-              kdePackages.qtdeclarative
-            ];
-
-            shellHook = ''
-              fish
-            '';
-          };
-
-          python = pkgs.mkShell {
-            buildInputs = with pkgs; [
-              self'.packages.hx-python
-              python3
-              manim
-            ];
-
-            shellHook = ''
-              fish
-            '';
-          };
-        };
-      };
-    };
+      
+    }
 }
