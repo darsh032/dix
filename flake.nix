@@ -8,7 +8,7 @@
     wrappers.url = "github:lassulus/wrappers";
 
     end4 = {
-      url = "github:end-4/dots-hyprland/main";
+      url = "github:darsh032/dots-hyprland-fork-for-some-reason";
       flake = false;
     };
 

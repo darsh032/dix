@@ -128,17 +128,16 @@
     "end4": {
       "flake": false,
       "locked": {
-        "lastModified": 1765201724,
-        "narHash": "sha256-7rH8SWGQ66meuWmw5jP9dCLz6OWu32flNp6sEpBcbp8=",
-        "owner": "end-4",
-        "repo": "dots-hyprland",
-        "rev": "bfe97c1c053fccaaef4d93df723bf02d1fc06871",
+        "lastModified": 1765265403,
+        "narHash": "sha256-HlXPxmlginH9E7axMG40MV9AkdQzcFmT2TZpxNWgXs4=",
+        "owner": "darsh032",
+        "repo": "dots-hyprland-fork-for-some-reason",
+        "rev": "f96872c016ec3d28333e49128d24358206bbb529",
         "type": "github"
       },
       "original": {
-        "owner": "end-4",
-        "ref": "main",
-        "repo": "dots-hyprland",
+        "owner": "darsh032",
+        "repo": "dots-hyprland-fork-for-some-reason",
         "type": "github"
       }
     },
