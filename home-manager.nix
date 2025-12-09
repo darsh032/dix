@@ -1,11 +1,11 @@
-{ pkgs, inputs, self', ... }:
+{ inputs, self', ... }:
 
 let
   username = "awesome";
 in {
   flake = {
     homeConfigurations.main = inputs.home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
+      inherit inputs;
       modules = [
         ./home-manager/main/home.nix
         ./home-manager/modules/default.nix
