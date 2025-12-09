@@ -12,7 +12,6 @@
       ...
     }@inputs:
     let
-      username = "awesome";
       system = "x86_64-linux";
 
       pkgs = import nixpkgs {
@@ -33,9 +32,12 @@
       };
     in
 
-    flake-parts.lib.mkFlake { inherit inputs; } {
+    flake-parts.lib.mkFlake {
+      inherit inputs;
+      
       imports = [
         ./nixos.nix
+        ./home-manager.nix
       ];
 
       systems = [ "x86_64-linux" ];
@@ -83,27 +85,7 @@
           };
         };
       };
-    }
-
-    {
-      
-
-
-      homeConfigurations.main = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home-manager/main/home.nix
-          ./home-manager/modules/default.nix
-          inputs.spicetify-nix.homeManagerModules.default
-        ];
-        extraSpecialArgs = {
-          inherit inputs username self;
-        };
-      };
-
     };
-
-  # Here start the inputs
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";

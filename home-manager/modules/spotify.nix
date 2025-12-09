@@ -1,4 +1,4 @@
-{ lib, config, pkgs, inputs, ... }: {
+{ lib, config, inputs, pkgs, ... }: {
   options = {
     moduleSpotify.enable = lib.mkEnableOption "enables spotify" // {    
       default = true; }; };
