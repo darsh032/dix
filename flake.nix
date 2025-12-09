@@ -7,6 +7,11 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     wrappers.url = "github:lassulus/wrappers";
 
+    end4 = {
+      url = "github:end-4/dots-hyprland/main";
+      flake = false;
+    };
+
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -61,6 +66,10 @@
       helix-rust = import ./wrappers/helix/helix-rust.nix {
         inherit pkgs wrappers;
       };
+
+      end4-quickshell = import ./wrappers/end4-quickshell.nix {
+        inherit pkgs wrappers inputs;
+      }
     in
     {
       packages = {
