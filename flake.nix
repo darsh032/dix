@@ -69,7 +69,9 @@
 
       end4-quickshell = import ./wrappers/end4-quickshell.nix {
         inherit pkgs wrappers inputs;
-      }
+
+        lib = pkgs.lib;
+      };
     in
     {
       packages = {
@@ -77,6 +79,7 @@
           hx-regular = helix-regular;
           hx-python = helix-python;
           hx-rust = helix-rust;
+          end4-quickshell = end4-quickshell;
         };
       };
       

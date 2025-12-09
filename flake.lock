@@ -125,6 +125,23 @@
         "type": "github"
       }
     },
+    "end4": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1765201724,
+        "narHash": "sha256-7rH8SWGQ66meuWmw5jP9dCLz6OWu32flNp6sEpBcbp8=",
+        "owner": "end-4",
+        "repo": "dots-hyprland",
+        "rev": "bfe97c1c053fccaaef4d93df723bf02d1fc06871",
+        "type": "github"
+      },
+      "original": {
+        "owner": "end-4",
+        "ref": "main",
+        "repo": "dots-hyprland",
+        "type": "github"
+      }
+    },
     "firefox-addons": {
       "inputs": {
         "nixpkgs": [
@@ -678,6 +695,7 @@
       "inputs": {
         "caelestia-cli": "caelestia-cli",
         "caelestia-shell": "caelestia-shell_2",
+        "end4": "end4",
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
