@@ -1,18 +1,18 @@
 {
-  theme = "catppuccin_mocha";
+  theme = "dark_plus";
 
   editor = {
     soft-wrap.enable = true;
     line-number = "relative";
-    color-modes = true;
+    color-modes = false;
     bufferline = "multiple";
 
     lsp.display-messages = true;
 
     statusline = {
-      mode.normal = "NORMAL";
-      mode.insert = "INSERT";
-      mode.select = "SELECT";
+      # mode.normal = "NORMAL";
+      # mode.insert = "INSERT";
+      # mode.select = "SELECT";
       right = [ "file-type" "position" ];
     };
 
