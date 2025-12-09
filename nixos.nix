@@ -3,7 +3,7 @@ let
   username = "awesome";
 in {
   flake = {
-    nixosConfigurations.omen = inputs.pkgs.lib.nixosSystem {
+    nixosConfigurations.omen = inputs.nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs username; };
       modules = [
         ./nixos-modules/default.nix
