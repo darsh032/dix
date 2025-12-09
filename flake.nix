@@ -8,6 +8,7 @@
       nixpkgs,
       home-manager,
       wrappers,
+      flake-parts,
       ...
     }@inputs:
     let
@@ -31,26 +32,58 @@
         inherit pkgs wrappers;
       };
     in
-    {
-      packages = {
-        ${system} = {
+
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+      perSystem = { pkgs, self', ... }: {
+        packages = {
           hx-regular = helix-regular;
           hx-python = helix-python;
           hx-rust = helix-rust;
         };
+
+        devShells = {
+          rustlings = pkgs.mkShell {
+            buildInputs = with pkgs; [
+              self'.packages.hx-rust
+              cargo
+              rustlings
+            ];
+
+            shellHook = ''
+              fish
+            '';
+          };
+
+          quickshell = pkgs.mkShell {
+            buildInputs = with pkgs; [
+              inputs.quickshell.packages.${system}.default
+              kdePackages.qtdeclarative
+            ];
+
+            shellHook = ''
+              fish
+            '';
+          };
+
+          python = pkgs.mkShell {
+            buildInputs = with pkgs; [
+              self'.packages.hx-python
+              python3
+              manim
+            ];
+
+            shellHook = ''
+              fish
+            '';
+          };
+        };
       };
+    }
+
+    {
       
-      nixosConfigurations.omen = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs username; };
-        modules = [
-          {
-            nixpkgs.config.allowUnfree = true;
-          }
-          ./nixos-modules/default.nix
-          ./system/default.nix
-          ./hosts/omen/configuration.nix
-        ];
-      };
+
 
       homeConfigurations.main = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
@@ -64,43 +97,9 @@
         };
       };
 
-      devShells.${system} = {
-        rustlings = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            self.packages.${system}.hx-rust
-            cargo
-            rustlings
-          ];
-
-          shellHook = ''
-            fish
-          '';
-        };
-
-        quickshell = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            inputs.quickshell.packages.${system}.default
-            kdePackages.qtdeclarative
-          ];
-
-          shellHook = ''
-            fish
-          '';
-        };
-
-        python = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            self.packages.${system}.hx-python
-            python3
-            manim
-          ];
-
-          shellHook = ''
-            fish
-          '';
-        };
-      };
     };
+
+  # Here start the inputs
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
