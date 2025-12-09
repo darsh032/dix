@@ -128,11 +128,11 @@
     "end4": {
       "flake": false,
       "locked": {
-        "lastModified": 1765265403,
-        "narHash": "sha256-HlXPxmlginH9E7axMG40MV9AkdQzcFmT2TZpxNWgXs4=",
+        "lastModified": 1765267390,
+        "narHash": "sha256-b/ucDosTWjBeNRAKACtpWPMEhaK8pa1Kk+ZkMvftLV4=",
         "owner": "darsh032",
         "repo": "dots-hyprland-fork-for-some-reason",
-        "rev": "f96872c016ec3d28333e49128d24358206bbb529",
+        "rev": "c03b125d36ac6dec9be734e762668b418d882e3d",
         "type": "github"
       },
       "original": {
